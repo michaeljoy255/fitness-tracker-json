@@ -1,0 +1,58 @@
+{
+    "exercises": [
+        {
+            "id": null,
+            "createdAt": null,
+            "name": null,
+            "category": null,
+            "desc": null,
+            "inputs": {
+                "notes": false,
+                "duration": false,
+                "distance": false,
+                "rounds": false,
+                "sets": false
+            },
+            "objectives": [
+                {
+                    "type": null,
+                    "icon": null,
+                    "text": null
+                }
+            ],
+            "records": [
+                {
+                    "id": null,
+                    "createdAt": null,
+                    "notes": null,
+                    "duration": null,
+                    "distance": {
+                        "miles": null,
+                        "kilometers": null
+                    },
+                    "rounds": [
+                        {
+                            "sets": [
+                                {
+                                    "weight": {
+                                        "pounds": null,
+                                        "kilograms": null
+                                    },
+                                    "reps": null
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "routines": [
+        {
+            "id": null,
+            "createdAt": null,
+            "name": null,
+            "exerciseIds": [null]
+        }
+    ]
+}
