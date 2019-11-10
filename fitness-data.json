@@ -1,1 +1,324 @@
-{ "exercises": [], "routines": [] }
+{
+  "exercises": [
+    {
+      "id": "_7gb5nv2s",
+      "createdAt": "2019-11-10T23:50:04.087Z",
+      "name": "Elliptical, Warmup",
+      "category": "Cardio",
+      "desc": "",
+      "inputs": {
+        "hasNotes": true,
+        "hasDuration": true,
+        "hasDistance": true,
+        "hasRounds": false,
+        "hasSets": false
+      },
+      "objectives": [
+        { "type": "Notes", "text": "Notes" },
+        { "type": "Intensity", "text": "6/10" },
+        { "type": "Resistence", "text": "8/20" },
+        { "type": "Incline", "text": "0/20" }
+      ],
+      "records": [
+        {
+          "id": "_p81qvayc",
+          "createdAt": "2019-11-10T23:50:04.087Z",
+          "duration": 420,
+          "distance": { "miles": 0.5, "kilometers": null },
+          "sets": []
+        }
+      ]
+    },
+    {
+      "id": "_2jiuo22p",
+      "createdAt": "2019-11-10T23:50:04.087Z",
+      "name": "Elliptical, Intervals",
+      "desc": "",
+      "inputs": {
+        "hasNotes": true,
+        "hasDuration": true,
+        "hasDistance": true,
+        "hasRounds": false,
+        "hasSets": false
+      },
+      "objectives": [
+        { "type": "Notes", "text": "Notes" },
+        { "type": "Intensity", "text": "8/10" },
+        { "type": "Resistence", "text": "8/20" },
+        { "type": "Incline", "text": "0/20" }
+      ],
+      "records": [
+        {
+          "id": "_lof46f9x",
+          "createdAt": "2019-11-10T23:50:04.087Z",
+          "duration": 1440,
+          "distance": { "miles": 2, "kilometers": null },
+          "sets": []
+        }
+      ]
+    },
+    {
+      "id": "_atl7bs91",
+      "createdAt": "2019-11-10T23:50:04.087Z",
+      "name": "Stretching",
+      "category": "Miscellaneous",
+      "desc": "",
+      "inputs": {
+        "hasNotes": true,
+        "hasDuration": true,
+        "hasDistance": false,
+        "hasRounds": false,
+        "hasSets": false
+      },
+      "objectives": [
+        { "type": "Notes", "text": "Notes" },
+        { "type": "Intensity", "text": "5/10" }
+      ],
+      "records": [
+        {
+          "id": "_3iy88rb9",
+          "createdAt": "2019-11-10T23:50:04.087Z",
+          "duration": 540,
+          "distance": null,
+          "sets": []
+        }
+      ]
+    },
+    {
+      "id": "_vgheq0y6",
+      "createdAt": "2019-11-10T23:50:04.087Z",
+      "name": "Flat Bench Press",
+      "category": "Chest",
+      "desc": "",
+      "inputs": {
+        "hasNotes": true,
+        "hasDuration": false,
+        "hasDistance": false,
+        "hasRounds": false,
+        "hasSets": true
+      },
+      "objectives": [
+        { "type": "Notes", "text": "Notes" },
+        { "type": "Breaks", "text": "3m" },
+        { "type": "Tempo", "text": "1.5s" },
+        { "type": "Intensity", "text": "7/10" }
+      ],
+      "records": [
+        {
+          "id": "_m5xvut44",
+          "createdAt": "2019-11-10T23:50:04.087Z",
+          "duration": null,
+          "distance": null,
+          "sets": [
+            { "weight": { "pounds": 130, "kilograms": null }, "reps": 10 },
+            { "weight": { "pounds": 130, "kilograms": null }, "reps": 10 },
+            { "weight": { "pounds": 130, "kilograms": null }, "reps": 10 },
+            { "weight": { "pounds": 130, "kilograms": null }, "reps": 10 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "_c61wn3gy",
+      "createdAt": "2019-11-10T23:50:04.087Z",
+      "name": "Incline Bench Press",
+      "category": "Chest",
+      "desc": "",
+      "inputs": {
+        "hasNotes": true,
+        "hasDuration": false,
+        "hasDistance": false,
+        "hasRounds": false,
+        "hasSets": true
+      },
+      "objectives": [
+        { "type": "Notes", "text": "Notes" },
+        { "type": "Breaks", "text": "3m" },
+        { "type": "Tempo", "text": "1.5s" },
+        { "type": "Intensity", "text": "7/10" }
+      ],
+      "records": [
+        {
+          "id": "_ma209oqc",
+          "createdAt": "2019-11-10T23:50:04.087Z",
+          "duration": null,
+          "distance": null,
+          "sets": [
+            { "weight": { "pounds": 75, "kilograms": null }, "reps": 10 },
+            { "weight": { "pounds": 75, "kilograms": null }, "reps": 10 },
+            { "weight": { "pounds": 75, "kilograms": null }, "reps": 10 },
+            { "weight": { "pounds": 75, "kilograms": null }, "reps": 10 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "_ljorj8to",
+      "createdAt": "2019-11-10T23:50:04.087Z",
+      "name": "Decline Bench Press",
+      "category": "Chest",
+      "desc": "",
+      "inputs": {
+        "hasNotes": true,
+        "hasDuration": false,
+        "hasDistance": false,
+        "hasRounds": false,
+        "hasSets": true
+      },
+      "objectives": [
+        { "type": "Notes", "text": "Notes" },
+        { "type": "Breaks", "text": "3m" },
+        { "type": "Tempo", "text": "1.5s" },
+        { "type": "Intensity", "text": "7/10" }
+      ],
+      "records": [
+        {
+          "id": "_dj6xry3a",
+          "createdAt": "2019-11-10T23:50:04.087Z",
+          "duration": null,
+          "distance": null,
+          "sets": [
+            { "weight": { "pounds": 130, "kilograms": null }, "reps": 10 },
+            { "weight": { "pounds": 130, "kilograms": null }, "reps": 10 },
+            { "weight": { "pounds": 130, "kilograms": null }, "reps": 10 },
+            { "weight": { "pounds": 130, "kilograms": null }, "reps": 10 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "_pkh7jdbz",
+      "createdAt": "2019-11-10T23:50:04.087Z",
+      "name": "Fly Machine (Chest)",
+      "category": "Chest",
+      "desc": "",
+      "inputs": {
+        "hasNotes": true,
+        "hasDuration": false,
+        "hasDistance": false,
+        "hasRounds": false,
+        "hasSets": true
+      },
+      "objectives": [
+        { "type": "Notes", "text": "Notes" },
+        { "type": "Breaks", "text": "1m 30s" },
+        { "type": "Tempo", "text": "2s" },
+        { "type": "Intensity", "text": "7/10" }
+      ],
+      "records": [
+        {
+          "id": "_jphg6wn9",
+          "createdAt": "2019-11-10T23:50:04.087Z",
+          "duration": null,
+          "distance": null,
+          "sets": [
+            { "weight": { "pounds": 120, "kilograms": null }, "reps": 10 },
+            { "weight": { "pounds": 120, "kilograms": null }, "reps": 10 },
+            { "weight": { "pounds": 120, "kilograms": null }, "reps": 10 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "_tx6ka6hh",
+      "createdAt": "2019-11-10T23:50:04.087Z",
+      "name": "Cable Tricep Pulldowns",
+      "category": "Triceps",
+      "desc": "",
+      "inputs": {
+        "hasNotes": true,
+        "hasDuration": false,
+        "hasDistance": false,
+        "hasRounds": false,
+        "hasSets": true
+      },
+      "objectives": [
+        { "type": "Notes", "text": "Notes" },
+        { "type": "Breaks", "text": "1m" },
+        { "type": "Tempo", "text": "1s" },
+        { "type": "Intensity", "text": "7/10" }
+      ],
+      "records": [
+        {
+          "id": "_qu2d7u1n",
+          "createdAt": "2019-11-10T23:50:04.087Z",
+          "duration": null,
+          "distance": null,
+          "sets": [
+            { "weight": { "pounds": 42.5, "kilograms": null }, "reps": 10 },
+            { "weight": { "pounds": 42.5, "kilograms": null }, "reps": 10 },
+            { "weight": { "pounds": 42.5, "kilograms": null }, "reps": 10 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "_vjx4lsbn",
+      "createdAt": "2019-11-10T23:50:04.087Z",
+      "name": "Tricep Press Machine",
+      "category": "Triceps",
+      "desc": "",
+      "inputs": {
+        "hasNotes": true,
+        "hasDuration": false,
+        "hasDistance": false,
+        "hasRounds": false,
+        "hasSets": true
+      },
+      "objectives": [
+        { "type": "Notes", "text": "Notes" },
+        { "type": "Breaks", "text": "1m" },
+        { "type": "Tempo", "text": "1s" },
+        { "type": "Intensity", "text": "7/10" }
+      ],
+      "records": [
+        {
+          "id": "_pope508m",
+          "createdAt": "2019-11-10T23:50:04.087Z",
+          "duration": null,
+          "distance": null,
+          "sets": [
+            { "weight": { "pounds": 190, "kilograms": null }, "reps": 10 },
+            { "weight": { "pounds": 190, "kilograms": null }, "reps": 10 },
+            { "weight": { "pounds": 190, "kilograms": null }, "reps": 10 }
+          ]
+        }
+      ]
+    }
+  ],
+  "routines": [
+    {
+      "id": "_a0jd8fyq",
+      "createdAt": "2019-11-10T23:50:04.087Z",
+      "name": "Chest and Triceps",
+      "exerciseIds": [
+        "_7gb5nv2s",
+        "_vgheq0y6",
+        "_c61wn3gy",
+        "_ljorj8to",
+        "_pkh7jdbz",
+        "_tx6ka6hh",
+        "_vjx4lsbn",
+        "_atl7bs91"
+      ]
+    },
+    {
+      "id": "_2aadm846",
+      "createdAt": "2019-11-10T23:50:04.087Z",
+      "name": "Back and Biceps",
+      "exerciseIds": ["_7gb5nv2s", "_atl7bs91"]
+    },
+    {
+      "id": "_wxq2fqd9",
+      "createdAt": "2019-11-10T23:50:04.087Z",
+      "name": "Legs, Shoulders, and Core",
+      "exerciseIds": ["_7gb5nv2s", "_atl7bs91"]
+    },
+    {
+      "id": "_5yz0iuem",
+      "createdAt": "2019-11-10T23:50:04.087Z",
+      "name": "General Cardio",
+      "exerciseIds": ["_2jiuo22p", "_atl7bs91"]
+    }
+  ]
+}
