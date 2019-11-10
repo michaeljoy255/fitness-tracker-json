@@ -4,7 +4,7 @@
   "description": "The purpose of the project is to centrally locate the exercises, records, and routines for the Fitness Tracker App. This is likely a temporaty solution until a persistent database solution is made.",
   "main": "fitness-data.js",
   "scripts": {
-    "start": "node fitness-data.js > fitness-data.json"
+    "build": "node fitness-data.js > fitness-data.json"
   },
   "repository": {
     "type": "git",
