@@ -1,8 +1,8 @@
 {
   "exercises": [
     {
-      "id": "_7gb5nv2s",
-      "createdAt": "2019-11-10T23:50:04.087Z",
+      "id": "_05kft112",
+      "createdAt": "2019-11-11T04:02:40.962Z",
       "name": "Elliptical, Warmup",
       "category": "Cardio",
       "desc": "",
@@ -10,7 +10,6 @@
         "hasNotes": true,
         "hasDuration": true,
         "hasDistance": true,
-        "hasRounds": false,
         "hasSets": false
       },
       "objectives": [
@@ -21,8 +20,7 @@
       ],
       "records": [
         {
-          "id": "_p81qvayc",
-          "createdAt": "2019-11-10T23:50:04.087Z",
+          "createdAt": "2019-11-11T04:02:40.962Z",
           "duration": 420,
           "distance": { "miles": 0.5, "kilometers": null },
           "sets": []
@@ -30,15 +28,14 @@
       ]
     },
     {
-      "id": "_2jiuo22p",
-      "createdAt": "2019-11-10T23:50:04.087Z",
+      "id": "_i9cl8rvy",
+      "createdAt": "2019-11-11T04:02:40.963Z",
       "name": "Elliptical, Intervals",
       "desc": "",
       "inputs": {
         "hasNotes": true,
         "hasDuration": true,
         "hasDistance": true,
-        "hasRounds": false,
         "hasSets": false
       },
       "objectives": [
@@ -49,8 +46,7 @@
       ],
       "records": [
         {
-          "id": "_lof46f9x",
-          "createdAt": "2019-11-10T23:50:04.087Z",
+          "createdAt": "2019-11-11T04:02:40.963Z",
           "duration": 1440,
           "distance": { "miles": 2, "kilometers": null },
           "sets": []
@@ -58,8 +54,8 @@
       ]
     },
     {
-      "id": "_atl7bs91",
-      "createdAt": "2019-11-10T23:50:04.087Z",
+      "id": "_vijqbu9l",
+      "createdAt": "2019-11-11T04:02:40.963Z",
       "name": "Stretching",
       "category": "Miscellaneous",
       "desc": "",
@@ -67,7 +63,6 @@
         "hasNotes": true,
         "hasDuration": true,
         "hasDistance": false,
-        "hasRounds": false,
         "hasSets": false
       },
       "objectives": [
@@ -76,8 +71,7 @@
       ],
       "records": [
         {
-          "id": "_3iy88rb9",
-          "createdAt": "2019-11-10T23:50:04.087Z",
+          "createdAt": "2019-11-11T04:02:40.963Z",
           "duration": 540,
           "distance": null,
           "sets": []
@@ -85,8 +79,8 @@
       ]
     },
     {
-      "id": "_vgheq0y6",
-      "createdAt": "2019-11-10T23:50:04.087Z",
+      "id": "_ukqlhn3a",
+      "createdAt": "2019-11-11T04:02:40.963Z",
       "name": "Flat Bench Press",
       "category": "Chest",
       "desc": "",
@@ -94,7 +88,6 @@
         "hasNotes": true,
         "hasDuration": false,
         "hasDistance": false,
-        "hasRounds": false,
         "hasSets": true
       },
       "objectives": [
@@ -105,8 +98,7 @@
       ],
       "records": [
         {
-          "id": "_m5xvut44",
-          "createdAt": "2019-11-10T23:50:04.087Z",
+          "createdAt": "2019-11-11T04:02:40.963Z",
           "duration": null,
           "distance": null,
           "sets": [
@@ -119,8 +111,8 @@
       ]
     },
     {
-      "id": "_c61wn3gy",
-      "createdAt": "2019-11-10T23:50:04.087Z",
+      "id": "_43gxankr",
+      "createdAt": "2019-11-11T04:02:40.963Z",
       "name": "Incline Bench Press",
       "category": "Chest",
       "desc": "",
@@ -128,7 +120,6 @@
         "hasNotes": true,
         "hasDuration": false,
         "hasDistance": false,
-        "hasRounds": false,
         "hasSets": true
       },
       "objectives": [
@@ -139,8 +130,7 @@
       ],
       "records": [
         {
-          "id": "_ma209oqc",
-          "createdAt": "2019-11-10T23:50:04.087Z",
+          "createdAt": "2019-11-11T04:02:40.963Z",
           "duration": null,
           "distance": null,
           "sets": [
@@ -153,8 +143,8 @@
       ]
     },
     {
-      "id": "_ljorj8to",
-      "createdAt": "2019-11-10T23:50:04.087Z",
+      "id": "_wgsne03p",
+      "createdAt": "2019-11-11T04:02:40.963Z",
       "name": "Decline Bench Press",
       "category": "Chest",
       "desc": "",
@@ -162,7 +152,6 @@
         "hasNotes": true,
         "hasDuration": false,
         "hasDistance": false,
-        "hasRounds": false,
         "hasSets": true
       },
       "objectives": [
@@ -173,8 +162,7 @@
       ],
       "records": [
         {
-          "id": "_dj6xry3a",
-          "createdAt": "2019-11-10T23:50:04.087Z",
+          "createdAt": "2019-11-11T04:02:40.963Z",
           "duration": null,
           "distance": null,
           "sets": [
@@ -187,8 +175,8 @@
       ]
     },
     {
-      "id": "_pkh7jdbz",
-      "createdAt": "2019-11-10T23:50:04.087Z",
+      "id": "_vt6yoh9f",
+      "createdAt": "2019-11-11T04:02:40.963Z",
       "name": "Fly Machine (Chest)",
       "category": "Chest",
       "desc": "",
@@ -196,7 +184,6 @@
         "hasNotes": true,
         "hasDuration": false,
         "hasDistance": false,
-        "hasRounds": false,
         "hasSets": true
       },
       "objectives": [
@@ -207,8 +194,7 @@
       ],
       "records": [
         {
-          "id": "_jphg6wn9",
-          "createdAt": "2019-11-10T23:50:04.087Z",
+          "createdAt": "2019-11-11T04:02:40.963Z",
           "duration": null,
           "distance": null,
           "sets": [
@@ -220,8 +206,8 @@
       ]
     },
     {
-      "id": "_tx6ka6hh",
-      "createdAt": "2019-11-10T23:50:04.087Z",
+      "id": "_m9hfd7cy",
+      "createdAt": "2019-11-11T04:02:40.963Z",
       "name": "Cable Tricep Pulldowns",
       "category": "Triceps",
       "desc": "",
@@ -229,7 +215,6 @@
         "hasNotes": true,
         "hasDuration": false,
         "hasDistance": false,
-        "hasRounds": false,
         "hasSets": true
       },
       "objectives": [
@@ -240,8 +225,7 @@
       ],
       "records": [
         {
-          "id": "_qu2d7u1n",
-          "createdAt": "2019-11-10T23:50:04.087Z",
+          "createdAt": "2019-11-11T04:02:40.963Z",
           "duration": null,
           "distance": null,
           "sets": [
@@ -253,8 +237,8 @@
       ]
     },
     {
-      "id": "_vjx4lsbn",
-      "createdAt": "2019-11-10T23:50:04.087Z",
+      "id": "_2lawo5pj",
+      "createdAt": "2019-11-11T04:02:40.963Z",
       "name": "Tricep Press Machine",
       "category": "Triceps",
       "desc": "",
@@ -262,7 +246,6 @@
         "hasNotes": true,
         "hasDuration": false,
         "hasDistance": false,
-        "hasRounds": false,
         "hasSets": true
       },
       "objectives": [
@@ -273,8 +256,7 @@
       ],
       "records": [
         {
-          "id": "_pope508m",
-          "createdAt": "2019-11-10T23:50:04.087Z",
+          "createdAt": "2019-11-11T04:02:40.963Z",
           "duration": null,
           "distance": null,
           "sets": [
@@ -288,37 +270,37 @@
   ],
   "routines": [
     {
-      "id": "_a0jd8fyq",
-      "createdAt": "2019-11-10T23:50:04.087Z",
+      "id": "_mbvv3xu6",
+      "createdAt": "2019-11-11T04:02:40.963Z",
       "name": "Chest and Triceps",
       "exerciseIds": [
-        "_7gb5nv2s",
-        "_vgheq0y6",
-        "_c61wn3gy",
-        "_ljorj8to",
-        "_pkh7jdbz",
-        "_tx6ka6hh",
-        "_vjx4lsbn",
-        "_atl7bs91"
+        "_05kft112",
+        "_ukqlhn3a",
+        "_43gxankr",
+        "_wgsne03p",
+        "_vt6yoh9f",
+        "_m9hfd7cy",
+        "_2lawo5pj",
+        "_vijqbu9l"
       ]
     },
     {
-      "id": "_2aadm846",
-      "createdAt": "2019-11-10T23:50:04.087Z",
+      "id": "_cnuqboqc",
+      "createdAt": "2019-11-11T04:02:40.963Z",
       "name": "Back and Biceps",
-      "exerciseIds": ["_7gb5nv2s", "_atl7bs91"]
+      "exerciseIds": ["_05kft112", "_vijqbu9l"]
     },
     {
-      "id": "_wxq2fqd9",
-      "createdAt": "2019-11-10T23:50:04.087Z",
+      "id": "_q0gu1xb1",
+      "createdAt": "2019-11-11T04:02:40.963Z",
       "name": "Legs, Shoulders, and Core",
-      "exerciseIds": ["_7gb5nv2s", "_atl7bs91"]
+      "exerciseIds": ["_05kft112", "_vijqbu9l"]
     },
     {
-      "id": "_5yz0iuem",
-      "createdAt": "2019-11-10T23:50:04.087Z",
+      "id": "_oq9grbfy",
+      "createdAt": "2019-11-11T04:02:40.963Z",
       "name": "General Cardio",
-      "exerciseIds": ["_2jiuo22p", "_atl7bs91"]
+      "exerciseIds": ["_i9cl8rvy", "_vijqbu9l"]
     }
   ]
 }

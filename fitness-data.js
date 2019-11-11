@@ -195,12 +195,11 @@ class Exercise {
 };
 
 class Inputs {
-  constructor(hasNotes, hasDuration, hasDistance, hasRounds, hasSets) {
-    this.hasNotes = hasNotes;
-    this.hasDuration = hasDuration;
-    this.hasDistance = hasDistance;
-    this.hasRounds = hasRounds;
-    this.hasSets = hasSets;
+  constructor(hasNotes, hasDuration, hasDistance, hasSets) {
+    this.hasNotes = hasNotes; // 1 input
+    this.hasDuration = hasDuration; // 3 inputs (H : M : S)
+    this.hasDistance = hasDistance; // 1 input
+    this.hasSets = hasSets; // 1-20 inputs
   };
 };
 
@@ -213,9 +212,8 @@ class Objective {
 
 class Record {
   constructor(duration, distance, sets) {
-    this.id = createId();
     this.createdAt = createDate();
-    this.duration = duration;
+    this.duration = duration; // hours : minutes : seconds
     this.distance = distance; // DistanceUnits
     this.sets = sets; // OneSet []
   };
@@ -263,7 +261,7 @@ fitness_data.exercises.push(
     _Exercise.ELLIPTICAL_WARMUP.name,
     _Exercise.ELLIPTICAL_WARMUP.category,
     _Exercise.ELLIPTICAL_WARMUP.desc,
-  new Inputs(true, true, true, false, false), [
+  new Inputs(true, true, true, false), [
     new Objective(_Objective.NOTES, "Notes"),
     new Objective(_Objective.INTENSITY, "6/10"),
     new Objective(_Objective.RESISTENCE, "8/20"),
@@ -277,7 +275,7 @@ fitness_data.exercises.push(
     _Exercise.ELLIPTICAL_INTERVAL.name,
     _Exercise.ELLIPTICAL_INTERVAL.category,
     _Exercise.ELLIPTICAL_INTERVAL.desc,
-  new Inputs(true, true, true, false, false), [
+  new Inputs(true, true, true, false), [
     new Objective(_Objective.NOTES, "Notes"),
     new Objective(_Objective.INTENSITY, "8/10"),
     new Objective(_Objective.RESISTENCE, "8/20"),
@@ -291,7 +289,7 @@ fitness_data.exercises.push(
     _Exercise.STRETCHING.name,
     _Exercise.STRETCHING.category,
     _Exercise.STRETCHING.desc,
-  new Inputs(true, true, false, false, false), [
+  new Inputs(true, true, false, false), [
     new Objective(_Objective.NOTES, "Notes"),
     new Objective(_Objective.INTENSITY, "5/10"),
   ], [
@@ -303,7 +301,7 @@ fitness_data.exercises.push(
     _Exercise.FLAT_BENCH_PRESS.name,
     _Exercise.FLAT_BENCH_PRESS.category,
     _Exercise.FLAT_BENCH_PRESS.desc,
-  new Inputs(true, false, false, false, true), [
+  new Inputs(true, false, false, true), [
     new Objective(_Objective.NOTES, "Notes"),
     new Objective(_Objective.BREAKS, "3m"),
     new Objective(_Objective.TEMPO, "1.5s"),
@@ -322,7 +320,7 @@ fitness_data.exercises.push(
     _Exercise.INCLINE_BENCH_PRESS.name,
     _Exercise.INCLINE_BENCH_PRESS.category,
     _Exercise.INCLINE_BENCH_PRESS.desc,
-  new Inputs(true, false, false, false, true), [
+  new Inputs(true, false, false, true), [
     new Objective(_Objective.NOTES, "Notes"),
     new Objective(_Objective.BREAKS, "3m"),
     new Objective(_Objective.TEMPO, "1.5s"),
@@ -341,7 +339,7 @@ fitness_data.exercises.push(
     _Exercise.DECLINE_BENCH_PRESS.name,
     _Exercise.DECLINE_BENCH_PRESS.category,
     _Exercise.DECLINE_BENCH_PRESS.desc,
-  new Inputs(true, false, false, false, true), [
+  new Inputs(true, false, false, true), [
     new Objective(_Objective.NOTES, "Notes"),
     new Objective(_Objective.BREAKS, "3m"),
     new Objective(_Objective.TEMPO, "1.5s"),
@@ -360,7 +358,7 @@ fitness_data.exercises.push(
     _Exercise.FLY_MACHINE_CHEST.name,
     _Exercise.FLY_MACHINE_CHEST.category,
     _Exercise.FLY_MACHINE_CHEST.desc,
-  new Inputs(true, false, false, false, true), [
+  new Inputs(true, false, false, true), [
     new Objective(_Objective.NOTES, "Notes"),
     new Objective(_Objective.BREAKS, "1m 30s"),
     new Objective(_Objective.TEMPO, "2s"),
@@ -378,7 +376,7 @@ fitness_data.exercises.push(
     _Exercise.CABLE_TRICEP_PULLDOWNS.name,
     _Exercise.CABLE_TRICEP_PULLDOWNS.category,
     _Exercise.CABLE_TRICEP_PULLDOWNS.desc,
-  new Inputs(true, false, false, false, true), [
+  new Inputs(true, false, false, true), [
     new Objective(_Objective.NOTES, "Notes"),
     new Objective(_Objective.BREAKS, "1m"),
     new Objective(_Objective.TEMPO, "1s"),
@@ -396,7 +394,7 @@ fitness_data.exercises.push(
     _Exercise.TRICEP_PRESS_MACHINE.name,
     _Exercise.TRICEP_PRESS_MACHINE.category,
     _Exercise.TRICEP_PRESS_MACHINE.desc,
-  new Inputs(true, false, false, false, true), [
+  new Inputs(true, false, false, true), [
     new Objective(_Objective.NOTES, "Notes"),
     new Objective(_Objective.BREAKS, "1m"),
     new Objective(_Objective.TEMPO, "1s"),
