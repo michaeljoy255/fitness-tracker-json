@@ -1,6 +1,11 @@
 "use strict";
 
 // ENUMS #######################################################################
+const _UnitPref = Object.freeze({
+  IMPERIAL: "Imperial",
+  METRIC: "Metric"
+});
+
 const _Category = Object.freeze({
   CARDIO: "Cardio",
   MISC: "Miscellaneous",
@@ -13,6 +18,7 @@ const _Category = Object.freeze({
   CORE: "Core"
 });
 
+// @TODO: Add exercise descriptions
 const _Exercise = Object.freeze({
   ELLIPTICAL_WARMUP: {
     name: "Elliptical, Warmup",
@@ -184,13 +190,53 @@ function createId() {
 
 function createDate() {
   return new Date();
-}
+};
 
 function getExerciseIdByName(name) {
   return fitness_data.exercises.filter( exer => {
     return exer.name === name;
   })[0].id;
-}
+};
+
+function getPounds(unitPref, weight) {
+  const kilogramToPound = 2.20462262185;
+
+  if (unitPref === "Imperial") {
+    return weight;
+  } else {
+    return weight * kilogramToPound;
+  };
+};
+
+function getKilograms(unitPref, weight) {
+  const poundToKilogram = 0.45359237;
+
+  if (unitPref === "Metric") {
+    return weight;
+  } else {
+    return weight * poundToKilogram;
+  };
+};
+
+function getMiles(unitPref, distance) {
+  const kilometerToMile = 0.62137119;
+
+  if (unitPref === "Imperial") {
+    return distance;
+  } else {
+    return distance * kilometerToMile;
+  };
+};
+
+function getKilometers(unitPref, distance) {
+  const mileToKilometer = 1.609344;
+
+  if (unitPref === "Metric") {
+    return distance;
+  } else {
+    return distance * mileToKilometer;
+  };
+};
 
 // CLASSES #####################################################################
 class Exercise {
@@ -240,16 +286,16 @@ class OneSet {
 };
 
 class WeightUnits {
-  constructor(pounds, kilograms) {
-    this.pounds = pounds;
-    this.kilograms = kilograms;
+  constructor(unitPref, weight) {
+    this.pounds = Number(getPounds(unitPref, weight).toFixed(2));
+    this.kilograms = Number(getKilograms(unitPref, weight).toFixed(2));
   };
 };
 
 class DistanceUnits {
-  constructor(miles, kilometers) {
-    this.miles = miles;
-    this.kilometers = kilometers;
+  constructor(unitPref, distance) {
+    this.miles = Number(getMiles(unitPref, distance).toFixed(2));
+    this.kilometers = Number(getKilometers(unitPref, distance).toFixed(2));
   };
 };
 
@@ -281,7 +327,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.INCLINE, "0/20")
   ], [
     new Record([
-      new OneSet(420, new DistanceUnits(0.5, null), null, null)
+      new OneSet(420, new DistanceUnits(_UnitPref.IMPERIAL, 0.5), null, null)
     ])
   ]));
 
@@ -297,7 +343,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.INCLINE, "0/20")
   ], [
     new Record([
-      new OneSet(1440, new DistanceUnits(2, null), null, null)
+      new OneSet(1440, new DistanceUnits(_UnitPref.IMPERIAL, 2), null, null)
     ])
   ]));
 
@@ -327,13 +373,13 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(130, null), 10),
-      new OneSet(null, null, new WeightUnits(130, null), 10),
-      new OneSet(null, null, new WeightUnits(130, null), 10),
-      new OneSet(null, null, new WeightUnits(130, null), 10)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 130), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 130), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 130), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 130), 10)
     ])
   ]));
-  
+
 fitness_data.exercises.push(
   new Exercise(
     _Exercise.INCLINE_BENCH_PRESS.name,
@@ -346,10 +392,10 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(75, null), 10),
-      new OneSet(null, null, new WeightUnits(75, null), 10),
-      new OneSet(null, null, new WeightUnits(75, null), 10),
-      new OneSet(null, null, new WeightUnits(75, null), 10)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 75), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 75), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 75), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 75), 10)
     ])
   ]));
 
@@ -365,10 +411,10 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(130, null), 10),
-      new OneSet(null, null, new WeightUnits(130, null), 10),
-      new OneSet(null, null, new WeightUnits(130, null), 10),
-      new OneSet(null, null, new WeightUnits(130, null), 10)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 130), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 130), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 130), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 130), 10)
     ])
   ]));
 
@@ -384,9 +430,9 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(120, null), 10),
-      new OneSet(null, null, new WeightUnits(120, null), 10),
-      new OneSet(null, null, new WeightUnits(120, null), 10)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10)
     ])
   ]));
 
@@ -402,9 +448,9 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(42.5, null), 10),
-      new OneSet(null, null, new WeightUnits(42.5, null), 10),
-      new OneSet(null, null, new WeightUnits(42.5, null), 10)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 42.5), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 42.5), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 42.5), 10)
     ])
   ]));
 
@@ -420,9 +466,9 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(190, null), 10),
-      new OneSet(null, null, new WeightUnits(190, null), 10),
-      new OneSet(null, null, new WeightUnits(190, null), 10)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 190), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 190), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 190), 10)
     ])
   ]));
 
@@ -438,10 +484,10 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(120, null), 10),
-      new OneSet(null, null, new WeightUnits(120, null), 10),
-      new OneSet(null, null, new WeightUnits(120, null), 10),
-      new OneSet(null, null, new WeightUnits(120, null), 10)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10)
     ])
   ]));
 
@@ -457,10 +503,10 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(190, null), 10),
-      new OneSet(null, null, new WeightUnits(190, null), 10),
-      new OneSet(null, null, new WeightUnits(190, null), 10),
-      new OneSet(null, null, new WeightUnits(190, null), 10)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 190), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 190), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 190), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 190), 10)
     ])
   ]));
 
@@ -476,10 +522,10 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(120, null), 10),
-      new OneSet(null, null, new WeightUnits(120, null), 10),
-      new OneSet(null, null, new WeightUnits(120, null), 10),
-      new OneSet(null, null, new WeightUnits(120, null), 10)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10)
     ])
   ]));
 
@@ -495,9 +541,9 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(-25, null), 10),
-      new OneSet(null, null, new WeightUnits(-25, null), 10),
-      new OneSet(null, null, new WeightUnits(-25, null), 10)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, -25), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, -25), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, -25), 10)
     ])
   ]));
 
@@ -513,9 +559,9 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(15, null), 10),
-      new OneSet(null, null, new WeightUnits(15, null), 10),
-      new OneSet(null, null, new WeightUnits(15, null), 10)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 15), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 15), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 15), 10)
     ])
   ]));
 
@@ -531,9 +577,9 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(30, null), 10),
-      new OneSet(null, null, new WeightUnits(30, null), 10),
-      new OneSet(null, null, new WeightUnits(30, null), 10)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 30), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 30), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 30), 10)
     ])
   ]));
 
@@ -549,9 +595,9 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(30, null), 10),
-      new OneSet(null, null, new WeightUnits(30, null), 10),
-      new OneSet(null, null, new WeightUnits(30, null), 10)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 30), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 30), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 30), 10)
     ])
   ]));
 
@@ -567,9 +613,9 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(10, null), 10),
-      new OneSet(null, null, new WeightUnits(10, null), 10),
-      new OneSet(null, null, new WeightUnits(10, null), 10)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 10), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 10), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 10), 10)
     ])
   ]));
 
@@ -585,9 +631,9 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(10, null), 10),
-      new OneSet(null, null, new WeightUnits(10, null), 10),
-      new OneSet(null, null, new WeightUnits(10, null), 10)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 10), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 10), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 10), 10)
     ])
   ]));
 
@@ -603,9 +649,9 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(60, null), 10),
-      new OneSet(null, null, new WeightUnits(60, null), 10),
-      new OneSet(null, null, new WeightUnits(60, null), 10)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 60), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 60), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 60), 10)
     ])
   ]));
 
@@ -621,9 +667,9 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(175, null), 10),
-      new OneSet(null, null, new WeightUnits(175, null), 10),
-      new OneSet(null, null, new WeightUnits(175, null), 10)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 175), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 175), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 175), 10)
     ])
   ]));
 
@@ -639,9 +685,9 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(90, null), 10),
-      new OneSet(null, null, new WeightUnits(90, null), 10),
-      new OneSet(null, null, new WeightUnits(90, null), 10)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 90), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 90), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 90), 10)
     ])
   ]));
 
@@ -657,9 +703,9 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(90, null), 10),
-      new OneSet(null, null, new WeightUnits(90, null), 10),
-      new OneSet(null, null, new WeightUnits(90, null), 10)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 90), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 90), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 90), 10)
     ])
   ]));
 
@@ -675,9 +721,9 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(175, null), 10),
-      new OneSet(null, null, new WeightUnits(175, null), 10),
-      new OneSet(null, null, new WeightUnits(175, null), 10)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 175), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 175), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 175), 10)
     ])
   ]));
 
@@ -693,9 +739,9 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(125, null), 10),
-      new OneSet(null, null, new WeightUnits(125, null), 10),
-      new OneSet(null, null, new WeightUnits(125, null), 10)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 125), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 125), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 125), 10)
     ])
   ]));
 
@@ -711,9 +757,9 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(200, null), 10),
-      new OneSet(null, null, new WeightUnits(200, null), 10),
-      new OneSet(null, null, new WeightUnits(200, null), 10)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 200), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 200), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 200), 10)
     ])
   ]));
 
@@ -729,9 +775,9 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(165, null), 10),
-      new OneSet(null, null, new WeightUnits(165, null), 10),
-      new OneSet(null, null, new WeightUnits(165, null), 10)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 165), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 165), 10),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 165), 10)
     ])
   ]));
 
@@ -747,10 +793,10 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(35, null), 25),
-      new OneSet(null, null, new WeightUnits(35, null), 25),
-      new OneSet(null, null, new WeightUnits(35, null), 25),
-      new OneSet(null, null, new WeightUnits(35, null), 25)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 35), 25),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 35), 25),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 35), 25),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 35), 25)
     ])
   ]));
 
@@ -766,10 +812,10 @@ fitness_data.exercises.push(
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
     new Record([
-      new OneSet(null, null, new WeightUnits(45, null), 25),
-      new OneSet(null, null, new WeightUnits(45, null), 25),
-      new OneSet(null, null, new WeightUnits(45, null), 25),
-      new OneSet(null, null, new WeightUnits(45, null), 25)
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 45), 25),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 45), 25),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 45), 25),
+      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 45), 25)
     ])
   ]));
 

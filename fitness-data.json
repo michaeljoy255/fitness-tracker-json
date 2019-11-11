@@ -1,8 +1,8 @@
 {
   "exercises": [
     {
-      "id": "_k1qr5295",
-      "createdAt": "2019-11-11T19:45:53.668Z",
+      "id": "_05pbj5ob",
+      "createdAt": "2019-11-11T21:23:48.684Z",
       "name": "Elliptical, Warmup",
       "category": "Cardio",
       "desc": "",
@@ -21,11 +21,11 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.668Z",
+          "createdAt": "2019-11-11T21:23:48.684Z",
           "sets": [
             {
               "duration": 420,
-              "distance": { "miles": 0.5, "kilometers": null },
+              "distance": { "miles": 0.5, "kilometers": 0.8 },
               "weight": null,
               "reps": null
             }
@@ -34,8 +34,8 @@
       ]
     },
     {
-      "id": "_7uvpgage",
-      "createdAt": "2019-11-11T19:45:53.668Z",
+      "id": "_kplyey7i",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Elliptical, Intervals",
       "desc": "",
       "inputs": {
@@ -53,11 +53,11 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.668Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": 1440,
-              "distance": { "miles": 2, "kilometers": null },
+              "distance": { "miles": 2, "kilometers": 3.22 },
               "weight": null,
               "reps": null
             }
@@ -66,8 +66,8 @@
       ]
     },
     {
-      "id": "_fbxawx5w",
-      "createdAt": "2019-11-11T19:45:53.668Z",
+      "id": "_dxs8ojvr",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Stretching",
       "category": "Miscellaneous",
       "desc": "",
@@ -84,7 +84,7 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.668Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             { "duration": 540, "distance": null, "weight": null, "reps": null }
           ]
@@ -92,8 +92,8 @@
       ]
     },
     {
-      "id": "_9aedm0qg",
-      "createdAt": "2019-11-11T19:45:53.668Z",
+      "id": "_magkmc34",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Flat Bench Press",
       "category": "Chest",
       "desc": "",
@@ -112,30 +112,30 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.668Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 130, "kilograms": null },
+              "weight": { "pounds": 130, "kilograms": 58.97 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 130, "kilograms": null },
+              "weight": { "pounds": 130, "kilograms": 58.97 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 130, "kilograms": null },
+              "weight": { "pounds": 130, "kilograms": 58.97 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 130, "kilograms": null },
+              "weight": { "pounds": 130, "kilograms": 58.97 },
               "reps": 10
             }
           ]
@@ -143,8 +143,8 @@
       ]
     },
     {
-      "id": "_kl21z91o",
-      "createdAt": "2019-11-11T19:45:53.668Z",
+      "id": "_sk0hdyyh",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Incline Bench Press",
       "category": "Chest",
       "desc": "",
@@ -163,30 +163,30 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.668Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 75, "kilograms": null },
+              "weight": { "pounds": 75, "kilograms": 34.02 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 75, "kilograms": null },
+              "weight": { "pounds": 75, "kilograms": 34.02 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 75, "kilograms": null },
+              "weight": { "pounds": 75, "kilograms": 34.02 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 75, "kilograms": null },
+              "weight": { "pounds": 75, "kilograms": 34.02 },
               "reps": 10
             }
           ]
@@ -194,8 +194,8 @@
       ]
     },
     {
-      "id": "_qy8yx9lz",
-      "createdAt": "2019-11-11T19:45:53.668Z",
+      "id": "_20w6dhq8",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Decline Bench Press",
       "category": "Chest",
       "desc": "",
@@ -214,30 +214,30 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.668Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 130, "kilograms": null },
+              "weight": { "pounds": 130, "kilograms": 58.97 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 130, "kilograms": null },
+              "weight": { "pounds": 130, "kilograms": 58.97 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 130, "kilograms": null },
+              "weight": { "pounds": 130, "kilograms": 58.97 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 130, "kilograms": null },
+              "weight": { "pounds": 130, "kilograms": 58.97 },
               "reps": 10
             }
           ]
@@ -245,8 +245,8 @@
       ]
     },
     {
-      "id": "_1xjf65l3",
-      "createdAt": "2019-11-11T19:45:53.668Z",
+      "id": "_wbimtk4s",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Fly Machine (Chest)",
       "category": "Chest",
       "desc": "",
@@ -265,24 +265,24 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.668Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 120, "kilograms": null },
+              "weight": { "pounds": 120, "kilograms": 54.43 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 120, "kilograms": null },
+              "weight": { "pounds": 120, "kilograms": 54.43 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 120, "kilograms": null },
+              "weight": { "pounds": 120, "kilograms": 54.43 },
               "reps": 10
             }
           ]
@@ -290,8 +290,8 @@
       ]
     },
     {
-      "id": "_49ktk03y",
-      "createdAt": "2019-11-11T19:45:53.668Z",
+      "id": "_7l0vnu8k",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Cable Tricep Pulldowns",
       "category": "Triceps",
       "desc": "",
@@ -310,24 +310,24 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.668Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 42.5, "kilograms": null },
+              "weight": { "pounds": 42.5, "kilograms": 19.28 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 42.5, "kilograms": null },
+              "weight": { "pounds": 42.5, "kilograms": 19.28 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 42.5, "kilograms": null },
+              "weight": { "pounds": 42.5, "kilograms": 19.28 },
               "reps": 10
             }
           ]
@@ -335,8 +335,8 @@
       ]
     },
     {
-      "id": "_jlc4pm2q",
-      "createdAt": "2019-11-11T19:45:53.668Z",
+      "id": "_t6a1ipsj",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Tricep Press Machine",
       "category": "Triceps",
       "desc": "",
@@ -355,24 +355,24 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.668Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 190, "kilograms": null },
+              "weight": { "pounds": 190, "kilograms": 86.18 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 190, "kilograms": null },
+              "weight": { "pounds": 190, "kilograms": 86.18 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 190, "kilograms": null },
+              "weight": { "pounds": 190, "kilograms": 86.18 },
               "reps": 10
             }
           ]
@@ -380,8 +380,8 @@
       ]
     },
     {
-      "id": "_xi42wmou",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_p9nuiehd",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Bent Over Rows",
       "category": "Back",
       "desc": "",
@@ -400,30 +400,30 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.668Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 120, "kilograms": null },
+              "weight": { "pounds": 120, "kilograms": 54.43 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 120, "kilograms": null },
+              "weight": { "pounds": 120, "kilograms": 54.43 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 120, "kilograms": null },
+              "weight": { "pounds": 120, "kilograms": 54.43 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 120, "kilograms": null },
+              "weight": { "pounds": 120, "kilograms": 54.43 },
               "reps": 10
             }
           ]
@@ -431,8 +431,8 @@
       ]
     },
     {
-      "id": "_bieffew4",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_kkrk4umz",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Shrugs",
       "category": "Back",
       "desc": "",
@@ -451,30 +451,30 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.669Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 190, "kilograms": null },
+              "weight": { "pounds": 190, "kilograms": 86.18 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 190, "kilograms": null },
+              "weight": { "pounds": 190, "kilograms": 86.18 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 190, "kilograms": null },
+              "weight": { "pounds": 190, "kilograms": 86.18 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 190, "kilograms": null },
+              "weight": { "pounds": 190, "kilograms": 86.18 },
               "reps": 10
             }
           ]
@@ -482,8 +482,8 @@
       ]
     },
     {
-      "id": "_64jsy8l0",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_1bkqyihd",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Stiff-Leg Deadlifts",
       "category": "Back",
       "desc": "",
@@ -502,30 +502,30 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.669Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 120, "kilograms": null },
+              "weight": { "pounds": 120, "kilograms": 54.43 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 120, "kilograms": null },
+              "weight": { "pounds": 120, "kilograms": 54.43 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 120, "kilograms": null },
+              "weight": { "pounds": 120, "kilograms": 54.43 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 120, "kilograms": null },
+              "weight": { "pounds": 120, "kilograms": 54.43 },
               "reps": 10
             }
           ]
@@ -533,8 +533,8 @@
       ]
     },
     {
-      "id": "_srfx4ead",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_nidp54eh",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Assisted Pull-ups",
       "category": "Back",
       "desc": "",
@@ -553,24 +553,24 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.669Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": -25, "kilograms": null },
+              "weight": { "pounds": -25, "kilograms": -11.34 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": -25, "kilograms": null },
+              "weight": { "pounds": -25, "kilograms": -11.34 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": -25, "kilograms": null },
+              "weight": { "pounds": -25, "kilograms": -11.34 },
               "reps": 10
             }
           ]
@@ -578,8 +578,8 @@
       ]
     },
     {
-      "id": "_500f14og",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_0ogbtvmk",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Overhand Curls",
       "category": "Biceps",
       "desc": "",
@@ -598,24 +598,24 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.669Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 15, "kilograms": null },
+              "weight": { "pounds": 15, "kilograms": 6.8 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 15, "kilograms": null },
+              "weight": { "pounds": 15, "kilograms": 6.8 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 15, "kilograms": null },
+              "weight": { "pounds": 15, "kilograms": 6.8 },
               "reps": 10
             }
           ]
@@ -623,8 +623,8 @@
       ]
     },
     {
-      "id": "_mtdivguu",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_749c818z",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Underhand Curls",
       "category": "Biceps",
       "desc": "",
@@ -643,24 +643,24 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.669Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 30, "kilograms": null },
+              "weight": { "pounds": 30, "kilograms": 13.61 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 30, "kilograms": null },
+              "weight": { "pounds": 30, "kilograms": 13.61 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 30, "kilograms": null },
+              "weight": { "pounds": 30, "kilograms": 13.61 },
               "reps": 10
             }
           ]
@@ -668,8 +668,8 @@
       ]
     },
     {
-      "id": "_gpe3vpdl",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_9gp3tgrp",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Hammer Curls",
       "category": "Biceps",
       "desc": "",
@@ -688,24 +688,24 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.669Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 30, "kilograms": null },
+              "weight": { "pounds": 30, "kilograms": 13.61 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 30, "kilograms": null },
+              "weight": { "pounds": 30, "kilograms": 13.61 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 30, "kilograms": null },
+              "weight": { "pounds": 30, "kilograms": 13.61 },
               "reps": 10
             }
           ]
@@ -713,8 +713,8 @@
       ]
     },
     {
-      "id": "_mt4tja02",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_v4xefkci",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Side Raises",
       "category": "Shoudlers",
       "desc": "",
@@ -733,24 +733,24 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.669Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 10, "kilograms": null },
+              "weight": { "pounds": 10, "kilograms": 4.54 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 10, "kilograms": null },
+              "weight": { "pounds": 10, "kilograms": 4.54 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 10, "kilograms": null },
+              "weight": { "pounds": 10, "kilograms": 4.54 },
               "reps": 10
             }
           ]
@@ -758,8 +758,8 @@
       ]
     },
     {
-      "id": "_xzy24brr",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_o2r0jlth",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Front Raises",
       "category": "Shoudlers",
       "desc": "",
@@ -778,24 +778,24 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.669Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 10, "kilograms": null },
+              "weight": { "pounds": 10, "kilograms": 4.54 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 10, "kilograms": null },
+              "weight": { "pounds": 10, "kilograms": 4.54 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 10, "kilograms": null },
+              "weight": { "pounds": 10, "kilograms": 4.54 },
               "reps": 10
             }
           ]
@@ -803,8 +803,8 @@
       ]
     },
     {
-      "id": "_iwfn9eo3",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_i9vgny5c",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Shoulder Press Machine",
       "category": "Shoudlers",
       "desc": "",
@@ -823,24 +823,24 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.669Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 60, "kilograms": null },
+              "weight": { "pounds": 60, "kilograms": 27.22 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 60, "kilograms": null },
+              "weight": { "pounds": 60, "kilograms": 27.22 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 60, "kilograms": null },
+              "weight": { "pounds": 60, "kilograms": 27.22 },
               "reps": 10
             }
           ]
@@ -848,8 +848,8 @@
       ]
     },
     {
-      "id": "_2wlqzygh",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_soelhkyp",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Leg Press Machine",
       "category": "Legs",
       "desc": "",
@@ -868,24 +868,24 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.669Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 175, "kilograms": null },
+              "weight": { "pounds": 175, "kilograms": 79.38 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 175, "kilograms": null },
+              "weight": { "pounds": 175, "kilograms": 79.38 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 175, "kilograms": null },
+              "weight": { "pounds": 175, "kilograms": 79.38 },
               "reps": 10
             }
           ]
@@ -893,8 +893,8 @@
       ]
     },
     {
-      "id": "_qlb1j9d2",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_h0ttfb8p",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Leg Extension Machine",
       "category": "Legs",
       "desc": "",
@@ -913,24 +913,24 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.669Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 90, "kilograms": null },
+              "weight": { "pounds": 90, "kilograms": 40.82 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 90, "kilograms": null },
+              "weight": { "pounds": 90, "kilograms": 40.82 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 90, "kilograms": null },
+              "weight": { "pounds": 90, "kilograms": 40.82 },
               "reps": 10
             }
           ]
@@ -938,8 +938,8 @@
       ]
     },
     {
-      "id": "_zfwg28zw",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_bcyp2nms",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Leg Curl Machine",
       "category": "Legs",
       "desc": "",
@@ -958,24 +958,24 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.669Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 90, "kilograms": null },
+              "weight": { "pounds": 90, "kilograms": 40.82 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 90, "kilograms": null },
+              "weight": { "pounds": 90, "kilograms": 40.82 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 90, "kilograms": null },
+              "weight": { "pounds": 90, "kilograms": 40.82 },
               "reps": 10
             }
           ]
@@ -983,8 +983,8 @@
       ]
     },
     {
-      "id": "_rta440v4",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_jv0xbr3y",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Calf Extension Machine",
       "category": "Legs",
       "desc": "",
@@ -1003,24 +1003,24 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.669Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 175, "kilograms": null },
+              "weight": { "pounds": 175, "kilograms": 79.38 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 175, "kilograms": null },
+              "weight": { "pounds": 175, "kilograms": 79.38 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 175, "kilograms": null },
+              "weight": { "pounds": 175, "kilograms": 79.38 },
               "reps": 10
             }
           ]
@@ -1028,8 +1028,8 @@
       ]
     },
     {
-      "id": "_8vyii5ym",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_zolve4d1",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Standing Glute Machine",
       "category": "Legs",
       "desc": "",
@@ -1048,24 +1048,24 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.669Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 125, "kilograms": null },
+              "weight": { "pounds": 125, "kilograms": 56.7 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 125, "kilograms": null },
+              "weight": { "pounds": 125, "kilograms": 56.7 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 125, "kilograms": null },
+              "weight": { "pounds": 125, "kilograms": 56.7 },
               "reps": 10
             }
           ]
@@ -1073,8 +1073,8 @@
       ]
     },
     {
-      "id": "_mvozl5mn",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_324k8nnt",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Hip Abduction (Out) Machine",
       "category": "Legs",
       "desc": "",
@@ -1093,24 +1093,24 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.669Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 200, "kilograms": null },
+              "weight": { "pounds": 200, "kilograms": 90.72 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 200, "kilograms": null },
+              "weight": { "pounds": 200, "kilograms": 90.72 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 200, "kilograms": null },
+              "weight": { "pounds": 200, "kilograms": 90.72 },
               "reps": 10
             }
           ]
@@ -1118,8 +1118,8 @@
       ]
     },
     {
-      "id": "_ef1yijz7",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_0eauw2la",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Hip Adduction (In) Machine",
       "category": "Legs",
       "desc": "",
@@ -1138,24 +1138,24 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.669Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 165, "kilograms": null },
+              "weight": { "pounds": 165, "kilograms": 74.84 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 165, "kilograms": null },
+              "weight": { "pounds": 165, "kilograms": 74.84 },
               "reps": 10
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 165, "kilograms": null },
+              "weight": { "pounds": 165, "kilograms": 74.84 },
               "reps": 10
             }
           ]
@@ -1163,8 +1163,8 @@
       ]
     },
     {
-      "id": "_n7c20hw3",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_c1swmvmf",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Abdominal Crunch Machine",
       "category": "Core",
       "desc": "",
@@ -1183,30 +1183,30 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.669Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 35, "kilograms": null },
+              "weight": { "pounds": 35, "kilograms": 15.88 },
               "reps": 25
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 35, "kilograms": null },
+              "weight": { "pounds": 35, "kilograms": 15.88 },
               "reps": 25
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 35, "kilograms": null },
+              "weight": { "pounds": 35, "kilograms": 15.88 },
               "reps": 25
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 35, "kilograms": null },
+              "weight": { "pounds": 35, "kilograms": 15.88 },
               "reps": 25
             }
           ]
@@ -1214,8 +1214,8 @@
       ]
     },
     {
-      "id": "_d77cn4ah",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_8nm0oiqd",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Oblique Side Bend",
       "category": "Core",
       "desc": "",
@@ -1234,30 +1234,30 @@
       ],
       "records": [
         {
-          "createdAt": "2019-11-11T19:45:53.669Z",
+          "createdAt": "2019-11-11T21:23:48.685Z",
           "sets": [
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 45, "kilograms": null },
+              "weight": { "pounds": 45, "kilograms": 20.41 },
               "reps": 25
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 45, "kilograms": null },
+              "weight": { "pounds": 45, "kilograms": 20.41 },
               "reps": 25
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 45, "kilograms": null },
+              "weight": { "pounds": 45, "kilograms": 20.41 },
               "reps": 25
             },
             {
               "duration": null,
               "distance": null,
-              "weight": { "pounds": 45, "kilograms": null },
+              "weight": { "pounds": 45, "kilograms": 20.41 },
               "reps": 25
             }
           ]
@@ -1267,123 +1267,123 @@
   ],
   "routines": [
     {
-      "id": "_0hd20uhl",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_l69ioqwx",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Chest and Triceps",
       "exerciseIds": [
-        "_k1qr5295",
-        "_9aedm0qg",
-        "_kl21z91o",
-        "_qy8yx9lz",
-        "_1xjf65l3",
-        "_49ktk03y",
-        "_jlc4pm2q",
-        "_fbxawx5w"
+        "_05pbj5ob",
+        "_magkmc34",
+        "_sk0hdyyh",
+        "_20w6dhq8",
+        "_wbimtk4s",
+        "_7l0vnu8k",
+        "_t6a1ipsj",
+        "_dxs8ojvr"
       ]
     },
     {
-      "id": "_bojpskpn",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_ncwu4jvn",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Back and Biceps",
       "exerciseIds": [
-        "_k1qr5295",
-        "_xi42wmou",
-        "_bieffew4",
-        "_64jsy8l0",
-        "_srfx4ead",
-        "_500f14og",
-        "_mtdivguu",
-        "_gpe3vpdl",
-        "_fbxawx5w"
+        "_05pbj5ob",
+        "_p9nuiehd",
+        "_kkrk4umz",
+        "_1bkqyihd",
+        "_nidp54eh",
+        "_0ogbtvmk",
+        "_749c818z",
+        "_9gp3tgrp",
+        "_dxs8ojvr"
       ]
     },
     {
-      "id": "_jfy8am6l",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_iwj1n3e4",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Legs, Shoulders, and Core",
       "exerciseIds": [
-        "_k1qr5295",
-        "_mt4tja02",
-        "_xzy24brr",
-        "_iwfn9eo3",
-        "_2wlqzygh",
-        "_qlb1j9d2",
-        "_zfwg28zw",
-        "_rta440v4",
-        "_8vyii5ym",
-        "_mvozl5mn",
-        "_ef1yijz7",
-        "_n7c20hw3",
-        "_d77cn4ah",
-        "_fbxawx5w"
+        "_05pbj5ob",
+        "_v4xefkci",
+        "_o2r0jlth",
+        "_i9vgny5c",
+        "_soelhkyp",
+        "_h0ttfb8p",
+        "_bcyp2nms",
+        "_jv0xbr3y",
+        "_zolve4d1",
+        "_324k8nnt",
+        "_0eauw2la",
+        "_c1swmvmf",
+        "_8nm0oiqd",
+        "_dxs8ojvr"
       ]
     },
     {
-      "id": "_u3nhqb63",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_v4r612sy",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Chest Only",
       "exerciseIds": [
-        "_k1qr5295",
-        "_9aedm0qg",
-        "_kl21z91o",
-        "_qy8yx9lz",
-        "_1xjf65l3",
-        "_fbxawx5w"
+        "_05pbj5ob",
+        "_magkmc34",
+        "_sk0hdyyh",
+        "_20w6dhq8",
+        "_wbimtk4s",
+        "_dxs8ojvr"
       ]
     },
     {
-      "id": "_fem6tps1",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_drxubgt2",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Back Only",
       "exerciseIds": [
-        "_k1qr5295",
-        "_xi42wmou",
-        "_bieffew4",
-        "_64jsy8l0",
-        "_srfx4ead",
-        "_fbxawx5w"
+        "_05pbj5ob",
+        "_p9nuiehd",
+        "_kkrk4umz",
+        "_1bkqyihd",
+        "_nidp54eh",
+        "_dxs8ojvr"
       ]
     },
     {
-      "id": "_6izcicgx",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_47f9z1up",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Legs Only",
       "exerciseIds": [
-        "_k1qr5295",
-        "_2wlqzygh",
-        "_qlb1j9d2",
-        "_zfwg28zw",
-        "_rta440v4",
-        "_8vyii5ym",
-        "_mvozl5mn",
-        "_ef1yijz7",
-        "_fbxawx5w"
+        "_05pbj5ob",
+        "_soelhkyp",
+        "_h0ttfb8p",
+        "_bcyp2nms",
+        "_jv0xbr3y",
+        "_zolve4d1",
+        "_324k8nnt",
+        "_0eauw2la",
+        "_dxs8ojvr"
       ]
     },
     {
-      "id": "_st1u3gvz",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_4keksdaj",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "Arms and Core",
       "exerciseIds": [
-        "_k1qr5295",
-        "_mt4tja02",
-        "_xzy24brr",
-        "_iwfn9eo3",
-        "_500f14og",
-        "_49ktk03y",
-        "_mtdivguu",
-        "_jlc4pm2q",
-        "_gpe3vpdl",
-        "_n7c20hw3",
-        "_d77cn4ah",
-        "_fbxawx5w"
+        "_05pbj5ob",
+        "_v4xefkci",
+        "_o2r0jlth",
+        "_i9vgny5c",
+        "_0ogbtvmk",
+        "_7l0vnu8k",
+        "_749c818z",
+        "_t6a1ipsj",
+        "_9gp3tgrp",
+        "_c1swmvmf",
+        "_8nm0oiqd",
+        "_dxs8ojvr"
       ]
     },
     {
-      "id": "_qpjs711e",
-      "createdAt": "2019-11-11T19:45:53.669Z",
+      "id": "_5ndtpkip",
+      "createdAt": "2019-11-11T21:23:48.685Z",
       "name": "General Cardio",
-      "exerciseIds": ["_7uvpgage", "_fbxawx5w"]
+      "exerciseIds": ["_kplyey7i", "_dxs8ojvr"]
     }
   ]
 }
