@@ -1,11 +1,11 @@
 {
   "exercises": [
     {
-      "id": "_99jthoou",
-      "createdAt": "2019-11-13T02:03:52.822Z",
+      "id": "_4zrwf7x4",
+      "createdAt": "2019-11-13T19:20:09.793Z",
       "name": "Elliptical, Warmup",
       "category": "Cardio",
-      "desc": "",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": true,
@@ -21,7 +21,7 @@
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.822Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             {
               "duration": 420,
@@ -34,10 +34,11 @@
       ]
     },
     {
-      "id": "_hsnaxjh8",
-      "createdAt": "2019-11-13T02:03:52.822Z",
+      "id": "_nw4i00al",
+      "createdAt": "2019-11-13T19:20:09.793Z",
       "name": "Elliptical, Intervals",
-      "desc": "",
+      "category": "Cardio",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": true,
@@ -53,7 +54,7 @@
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.822Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             {
               "duration": 1440,
@@ -66,11 +67,37 @@
       ]
     },
     {
-      "id": "_o5yg5l1g",
-      "createdAt": "2019-11-13T02:03:52.822Z",
+      "id": "_pqgx34j8",
+      "createdAt": "2019-11-13T19:20:09.793Z",
+      "name": "Stepper Machine",
+      "category": "Cardio",
+      "desc": "PLACEHOLDER",
+      "inputs": {
+        "hasNotes": true,
+        "hasDuration": true,
+        "hasDistance": false,
+        "hasWeight": false,
+        "hasReps": false
+      },
+      "objectives": [
+        { "type": "Notes", "text": "Notes" },
+        { "type": "Intensity", "text": "High" }
+      ],
+      "exerciseRecords": [
+        {
+          "createdAt": "2019-11-13T19:20:09.795Z",
+          "sets": [
+            { "duration": 600, "distance": null, "weight": null, "reps": null }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "_tf9jihgu",
+      "createdAt": "2019-11-13T19:20:09.793Z",
       "name": "Stretching",
       "category": "Miscellaneous",
-      "desc": "",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": true,
@@ -84,7 +111,7 @@
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.822Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             { "duration": 540, "distance": null, "weight": null, "reps": null }
           ]
@@ -92,11 +119,11 @@
       ]
     },
     {
-      "id": "_01ap254z",
-      "createdAt": "2019-11-13T02:03:52.822Z",
+      "id": "_6ljv9nzo",
+      "createdAt": "2019-11-13T19:20:09.793Z",
       "name": "Flat Bench Press",
       "category": "Chest",
-      "desc": "",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -106,13 +133,13 @@
       },
       "objectives": [
         { "type": "Notes", "text": "Notes" },
-        { "type": "Rest", "text": "2m" },
+        { "type": "Rest", "text": "3m" },
         { "type": "Tempo", "text": "Normal" },
         { "type": "Intensity", "text": "High" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.822Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             {
               "duration": null,
@@ -143,11 +170,11 @@
       ]
     },
     {
-      "id": "_f44e4ye9",
-      "createdAt": "2019-11-13T02:03:52.822Z",
+      "id": "_9kll3q1p",
+      "createdAt": "2019-11-13T19:20:09.793Z",
       "name": "Incline Bench Press",
       "category": "Chest",
-      "desc": "",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -157,13 +184,13 @@
       },
       "objectives": [
         { "type": "Notes", "text": "Notes" },
-        { "type": "Rest", "text": "2m" },
+        { "type": "Rest", "text": "3m" },
         { "type": "Tempo", "text": "Normal" },
         { "type": "Intensity", "text": "High" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.822Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             {
               "duration": null,
@@ -194,11 +221,11 @@
       ]
     },
     {
-      "id": "_glbs46r3",
-      "createdAt": "2019-11-13T02:03:52.822Z",
+      "id": "_4yntcysn",
+      "createdAt": "2019-11-13T19:20:09.793Z",
       "name": "Decline Bench Press",
       "category": "Chest",
-      "desc": "",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -208,13 +235,13 @@
       },
       "objectives": [
         { "type": "Notes", "text": "Notes" },
-        { "type": "Rest", "text": "2m" },
+        { "type": "Rest", "text": "3m" },
         { "type": "Tempo", "text": "Normal" },
         { "type": "Intensity", "text": "High" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.822Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             {
               "duration": null,
@@ -245,11 +272,11 @@
       ]
     },
     {
-      "id": "_jenz5qsp",
-      "createdAt": "2019-11-13T02:03:52.822Z",
+      "id": "_vptsonw1",
+      "createdAt": "2019-11-13T19:20:09.793Z",
       "name": "Fly Machine (Chest)",
       "category": "Chest",
-      "desc": "",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -265,7 +292,7 @@
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.822Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             {
               "duration": null,
@@ -290,11 +317,56 @@
       ]
     },
     {
-      "id": "_ms4cax09",
-      "createdAt": "2019-11-13T02:03:52.822Z",
+      "id": "_zj5oq9pf",
+      "createdAt": "2019-11-13T19:20:09.793Z",
+      "name": "Skull Crushers",
+      "category": "Triceps",
+      "desc": "PLACEHOLDER",
+      "inputs": {
+        "hasNotes": true,
+        "hasDuration": false,
+        "hasDistance": false,
+        "hasWeight": true,
+        "hasReps": true
+      },
+      "objectives": [
+        { "type": "Notes", "text": "Notes" },
+        { "type": "Rest", "text": "1m" },
+        { "type": "Tempo", "text": "Normal" },
+        { "type": "Intensity", "text": "Medium" }
+      ],
+      "exerciseRecords": [
+        {
+          "createdAt": "2019-11-13T19:20:09.795Z",
+          "sets": [
+            {
+              "duration": null,
+              "distance": null,
+              "weight": { "pounds": 40, "kilograms": 18.14 },
+              "reps": 10
+            },
+            {
+              "duration": null,
+              "distance": null,
+              "weight": { "pounds": 40, "kilograms": 18.14 },
+              "reps": 10
+            },
+            {
+              "duration": null,
+              "distance": null,
+              "weight": { "pounds": 40, "kilograms": 18.14 },
+              "reps": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "_og067oux",
+      "createdAt": "2019-11-13T19:20:09.793Z",
       "name": "Cable Tricep Pulldowns",
       "category": "Triceps",
-      "desc": "",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -304,13 +376,13 @@
       },
       "objectives": [
         { "type": "Notes", "text": "Notes" },
-        { "type": "Rest", "text": "1m 30s" },
+        { "type": "Rest", "text": "2m" },
         { "type": "Tempo", "text": "Normal" },
         { "type": "Intensity", "text": "High" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.822Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             {
               "duration": null,
@@ -335,11 +407,11 @@
       ]
     },
     {
-      "id": "_4nim2je8",
-      "createdAt": "2019-11-13T02:03:52.822Z",
+      "id": "_n38e1htx",
+      "createdAt": "2019-11-13T19:20:09.793Z",
       "name": "Tricep Press Machine",
       "category": "Triceps",
-      "desc": "",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -349,13 +421,13 @@
       },
       "objectives": [
         { "type": "Notes", "text": "Notes" },
-        { "type": "Rest", "text": "1m 30s" },
+        { "type": "Rest", "text": "2m" },
         { "type": "Tempo", "text": "Normal" },
         { "type": "Intensity", "text": "High" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.822Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             {
               "duration": null,
@@ -380,11 +452,11 @@
       ]
     },
     {
-      "id": "_lybh26bn",
-      "createdAt": "2019-11-13T02:03:52.822Z",
+      "id": "_jlllppfs",
+      "createdAt": "2019-11-13T19:20:09.793Z",
       "name": "Bent Over Rows",
       "category": "Back",
-      "desc": "",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -394,13 +466,13 @@
       },
       "objectives": [
         { "type": "Notes", "text": "Notes" },
-        { "type": "Rest", "text": "2m" },
+        { "type": "Rest", "text": "3m" },
         { "type": "Tempo", "text": "Normal" },
         { "type": "Intensity", "text": "High" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.822Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             {
               "duration": null,
@@ -431,11 +503,11 @@
       ]
     },
     {
-      "id": "_7k5e5og9",
-      "createdAt": "2019-11-13T02:03:52.822Z",
+      "id": "_f0y58nov",
+      "createdAt": "2019-11-13T19:20:09.793Z",
       "name": "Shrugs",
       "category": "Back",
-      "desc": "",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -445,13 +517,13 @@
       },
       "objectives": [
         { "type": "Notes", "text": "Notes" },
-        { "type": "Rest", "text": "2m" },
+        { "type": "Rest", "text": "3m" },
         { "type": "Tempo", "text": "Normal" },
         { "type": "Intensity", "text": "High" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.822Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             {
               "duration": null,
@@ -482,11 +554,11 @@
       ]
     },
     {
-      "id": "_3zli75d9",
-      "createdAt": "2019-11-13T02:03:52.822Z",
-      "name": "Stiff-Leg Deadlifts",
+      "id": "_dawrxtg4",
+      "createdAt": "2019-11-13T19:20:09.794Z",
+      "name": "Stiff Leg Deadlift",
       "category": "Back",
-      "desc": "",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -496,13 +568,13 @@
       },
       "objectives": [
         { "type": "Notes", "text": "Notes" },
-        { "type": "Rest", "text": "2m" },
+        { "type": "Rest", "text": "3m" },
         { "type": "Tempo", "text": "Normal" },
         { "type": "Intensity", "text": "High" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.822Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             {
               "duration": null,
@@ -533,11 +605,11 @@
       ]
     },
     {
-      "id": "_tluqk492",
-      "createdAt": "2019-11-13T02:03:52.822Z",
+      "id": "_te4ivb3g",
+      "createdAt": "2019-11-13T19:20:09.794Z",
       "name": "Assisted Pull-ups",
       "category": "Back",
-      "desc": "",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -553,7 +625,7 @@
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.822Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             {
               "duration": null,
@@ -578,11 +650,11 @@
       ]
     },
     {
-      "id": "_0elajh4r",
-      "createdAt": "2019-11-13T02:03:52.822Z",
+      "id": "_nusfgy49",
+      "createdAt": "2019-11-13T19:20:09.794Z",
       "name": "Overhand Curls",
       "category": "Biceps",
-      "desc": "",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -592,13 +664,13 @@
       },
       "objectives": [
         { "type": "Notes", "text": "Notes" },
-        { "type": "Rest", "text": "2m" },
+        { "type": "Rest", "text": "1m" },
         { "type": "Tempo", "text": "Normal" },
         { "type": "Intensity", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.822Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             {
               "duration": null,
@@ -623,11 +695,11 @@
       ]
     },
     {
-      "id": "_rapqcotf",
-      "createdAt": "2019-11-13T02:03:52.822Z",
+      "id": "_36iyn8oj",
+      "createdAt": "2019-11-13T19:20:09.794Z",
       "name": "Underhand Curls",
       "category": "Biceps",
-      "desc": "",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -643,7 +715,7 @@
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.822Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             {
               "duration": null,
@@ -668,11 +740,11 @@
       ]
     },
     {
-      "id": "_526w8sl6",
-      "createdAt": "2019-11-13T02:03:52.822Z",
+      "id": "_vdlb1dv7",
+      "createdAt": "2019-11-13T19:20:09.794Z",
       "name": "Hammer Curls",
       "category": "Biceps",
-      "desc": "",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -688,7 +760,7 @@
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.822Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             {
               "duration": null,
@@ -713,11 +785,11 @@
       ]
     },
     {
-      "id": "_2iugyeyn",
-      "createdAt": "2019-11-13T02:03:52.822Z",
+      "id": "_z7mlczq4",
+      "createdAt": "2019-11-13T19:20:09.794Z",
       "name": "Side Raises",
       "category": "Shoudlers",
-      "desc": "",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -733,7 +805,7 @@
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.822Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             {
               "duration": null,
@@ -758,11 +830,11 @@
       ]
     },
     {
-      "id": "_ocx2yqd2",
-      "createdAt": "2019-11-13T02:03:52.822Z",
+      "id": "_jd8vpo12",
+      "createdAt": "2019-11-13T19:20:09.794Z",
       "name": "Front Raises",
       "category": "Shoudlers",
-      "desc": "",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -778,7 +850,7 @@
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.822Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             {
               "duration": null,
@@ -803,11 +875,11 @@
       ]
     },
     {
-      "id": "_0ysnybww",
-      "createdAt": "2019-11-13T02:03:52.822Z",
+      "id": "_799p6by6",
+      "createdAt": "2019-11-13T19:20:09.794Z",
       "name": "Shoulder Press Machine",
       "category": "Shoudlers",
-      "desc": "",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -823,7 +895,7 @@
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.822Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             {
               "duration": null,
@@ -848,191 +920,11 @@
       ]
     },
     {
-      "id": "_8kkjmfsp",
-      "createdAt": "2019-11-13T02:03:52.822Z",
+      "id": "_1qslnux6",
+      "createdAt": "2019-11-13T19:20:09.794Z",
       "name": "Leg Press Machine",
       "category": "Legs",
-      "desc": "",
-      "inputs": {
-        "hasNotes": true,
-        "hasDuration": false,
-        "hasDistance": false,
-        "hasWeight": true,
-        "hasReps": true
-      },
-      "objectives": [
-        { "type": "Notes", "text": "Notes" },
-        { "type": "Rest", "text": "1m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
-      ],
-      "exerciseRecords": [
-        {
-          "createdAt": "2019-11-13T02:03:52.822Z",
-          "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 175, "kilograms": 79.38 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 175, "kilograms": 79.38 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 175, "kilograms": 79.38 },
-              "reps": 10
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "_634d396s",
-      "createdAt": "2019-11-13T02:03:52.823Z",
-      "name": "Leg Extension Machine",
-      "category": "Legs",
-      "desc": "",
-      "inputs": {
-        "hasNotes": true,
-        "hasDuration": false,
-        "hasDistance": false,
-        "hasWeight": true,
-        "hasReps": true
-      },
-      "objectives": [
-        { "type": "Notes", "text": "Notes" },
-        { "type": "Rest", "text": "1m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
-      ],
-      "exerciseRecords": [
-        {
-          "createdAt": "2019-11-13T02:03:52.823Z",
-          "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 90, "kilograms": 40.82 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 90, "kilograms": 40.82 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 90, "kilograms": 40.82 },
-              "reps": 10
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "_tgbuhjan",
-      "createdAt": "2019-11-13T02:03:52.823Z",
-      "name": "Leg Curl Machine",
-      "category": "Legs",
-      "desc": "",
-      "inputs": {
-        "hasNotes": true,
-        "hasDuration": false,
-        "hasDistance": false,
-        "hasWeight": true,
-        "hasReps": true
-      },
-      "objectives": [
-        { "type": "Notes", "text": "Notes" },
-        { "type": "Rest", "text": "1m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
-      ],
-      "exerciseRecords": [
-        {
-          "createdAt": "2019-11-13T02:03:52.823Z",
-          "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 90, "kilograms": 40.82 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 90, "kilograms": 40.82 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 90, "kilograms": 40.82 },
-              "reps": 10
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "_avesbyhn",
-      "createdAt": "2019-11-13T02:03:52.823Z",
-      "name": "Calf Extension Machine",
-      "category": "Legs",
-      "desc": "",
-      "inputs": {
-        "hasNotes": true,
-        "hasDuration": false,
-        "hasDistance": false,
-        "hasWeight": true,
-        "hasReps": true
-      },
-      "objectives": [
-        { "type": "Notes", "text": "Notes" },
-        { "type": "Rest", "text": "1m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
-      ],
-      "exerciseRecords": [
-        {
-          "createdAt": "2019-11-13T02:03:52.823Z",
-          "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 175, "kilograms": 79.38 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 175, "kilograms": 79.38 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 175, "kilograms": 79.38 },
-              "reps": 10
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "_a5dwo19o",
-      "createdAt": "2019-11-13T02:03:52.823Z",
-      "name": "Standing Glute Machine",
-      "category": "Legs",
-      "desc": "",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -1048,7 +940,187 @@
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.823Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
+          "sets": [
+            {
+              "duration": null,
+              "distance": null,
+              "weight": { "pounds": 175, "kilograms": 79.38 },
+              "reps": 10
+            },
+            {
+              "duration": null,
+              "distance": null,
+              "weight": { "pounds": 175, "kilograms": 79.38 },
+              "reps": 10
+            },
+            {
+              "duration": null,
+              "distance": null,
+              "weight": { "pounds": 175, "kilograms": 79.38 },
+              "reps": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "_shiuoevh",
+      "createdAt": "2019-11-13T19:20:09.794Z",
+      "name": "Leg Extension Machine",
+      "category": "Legs",
+      "desc": "PLACEHOLDER",
+      "inputs": {
+        "hasNotes": true,
+        "hasDuration": false,
+        "hasDistance": false,
+        "hasWeight": true,
+        "hasReps": true
+      },
+      "objectives": [
+        { "type": "Notes", "text": "Notes" },
+        { "type": "Rest", "text": "1m" },
+        { "type": "Tempo", "text": "Normal" },
+        { "type": "Intensity", "text": "High" }
+      ],
+      "exerciseRecords": [
+        {
+          "createdAt": "2019-11-13T19:20:09.795Z",
+          "sets": [
+            {
+              "duration": null,
+              "distance": null,
+              "weight": { "pounds": 90, "kilograms": 40.82 },
+              "reps": 10
+            },
+            {
+              "duration": null,
+              "distance": null,
+              "weight": { "pounds": 90, "kilograms": 40.82 },
+              "reps": 10
+            },
+            {
+              "duration": null,
+              "distance": null,
+              "weight": { "pounds": 90, "kilograms": 40.82 },
+              "reps": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "_y41r9jxh",
+      "createdAt": "2019-11-13T19:20:09.794Z",
+      "name": "Leg Curl Machine",
+      "category": "Legs",
+      "desc": "PLACEHOLDER",
+      "inputs": {
+        "hasNotes": true,
+        "hasDuration": false,
+        "hasDistance": false,
+        "hasWeight": true,
+        "hasReps": true
+      },
+      "objectives": [
+        { "type": "Notes", "text": "Notes" },
+        { "type": "Rest", "text": "1m" },
+        { "type": "Tempo", "text": "Normal" },
+        { "type": "Intensity", "text": "High" }
+      ],
+      "exerciseRecords": [
+        {
+          "createdAt": "2019-11-13T19:20:09.795Z",
+          "sets": [
+            {
+              "duration": null,
+              "distance": null,
+              "weight": { "pounds": 90, "kilograms": 40.82 },
+              "reps": 10
+            },
+            {
+              "duration": null,
+              "distance": null,
+              "weight": { "pounds": 90, "kilograms": 40.82 },
+              "reps": 10
+            },
+            {
+              "duration": null,
+              "distance": null,
+              "weight": { "pounds": 90, "kilograms": 40.82 },
+              "reps": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "_zceggz20",
+      "createdAt": "2019-11-13T19:20:09.794Z",
+      "name": "Calf Extension Machine",
+      "category": "Legs",
+      "desc": "PLACEHOLDER",
+      "inputs": {
+        "hasNotes": true,
+        "hasDuration": false,
+        "hasDistance": false,
+        "hasWeight": true,
+        "hasReps": true
+      },
+      "objectives": [
+        { "type": "Notes", "text": "Notes" },
+        { "type": "Rest", "text": "1m" },
+        { "type": "Tempo", "text": "Normal" },
+        { "type": "Intensity", "text": "High" }
+      ],
+      "exerciseRecords": [
+        {
+          "createdAt": "2019-11-13T19:20:09.795Z",
+          "sets": [
+            {
+              "duration": null,
+              "distance": null,
+              "weight": { "pounds": 175, "kilograms": 79.38 },
+              "reps": 10
+            },
+            {
+              "duration": null,
+              "distance": null,
+              "weight": { "pounds": 175, "kilograms": 79.38 },
+              "reps": 10
+            },
+            {
+              "duration": null,
+              "distance": null,
+              "weight": { "pounds": 175, "kilograms": 79.38 },
+              "reps": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "_t1qd4reu",
+      "createdAt": "2019-11-13T19:20:09.794Z",
+      "name": "Standing Glute Machine",
+      "category": "Legs",
+      "desc": "PLACEHOLDER",
+      "inputs": {
+        "hasNotes": true,
+        "hasDuration": false,
+        "hasDistance": false,
+        "hasWeight": true,
+        "hasReps": true
+      },
+      "objectives": [
+        { "type": "Notes", "text": "Notes" },
+        { "type": "Rest", "text": "1m" },
+        { "type": "Tempo", "text": "Normal" },
+        { "type": "Intensity", "text": "High" }
+      ],
+      "exerciseRecords": [
+        {
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             {
               "duration": null,
@@ -1073,11 +1145,11 @@
       ]
     },
     {
-      "id": "_fi810byg",
-      "createdAt": "2019-11-13T02:03:52.823Z",
+      "id": "_ki3n6j07",
+      "createdAt": "2019-11-13T19:20:09.794Z",
       "name": "Hip Abduction (Out) Machine",
       "category": "Legs",
-      "desc": "",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -1089,11 +1161,11 @@
         { "type": "Notes", "text": "Notes" },
         { "type": "Rest", "text": "1m" },
         { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Intensity", "text": "High" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.823Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             {
               "duration": null,
@@ -1118,11 +1190,11 @@
       ]
     },
     {
-      "id": "_836nujnq",
-      "createdAt": "2019-11-13T02:03:52.823Z",
-      "name": "Hip Adduction (In) Machine",
+      "id": "_oapiegvw",
+      "createdAt": "2019-11-13T19:20:09.794Z",
+      "name": "Hip Adduction (in) Machine",
       "category": "Legs",
-      "desc": "",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -1134,11 +1206,11 @@
         { "type": "Notes", "text": "Notes" },
         { "type": "Rest", "text": "1m" },
         { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Intensity", "text": "High" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.823Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             {
               "duration": null,
@@ -1163,11 +1235,11 @@
       ]
     },
     {
-      "id": "_y9m2k3t5",
-      "createdAt": "2019-11-13T02:03:52.823Z",
+      "id": "_f2nxrdwa",
+      "createdAt": "2019-11-13T19:20:09.794Z",
       "name": "Abdominal Crunch Machine",
       "category": "Core",
-      "desc": "",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -1183,7 +1255,7 @@
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.823Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             {
               "duration": null,
@@ -1214,11 +1286,11 @@
       ]
     },
     {
-      "id": "_qsjs3usn",
-      "createdAt": "2019-11-13T02:03:52.823Z",
-      "name": "Oblique Side Bend",
+      "id": "_b3zm5q4u",
+      "createdAt": "2019-11-13T19:20:09.794Z",
+      "name": "Oblique Side Bends",
       "category": "Core",
-      "desc": "",
+      "desc": "PLACEHOLDER",
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -1230,11 +1302,11 @@
         { "type": "Notes", "text": "Notes" },
         { "type": "Rest", "text": "1m" },
         { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Intensity", "text": "High" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-13T02:03:52.823Z",
+          "createdAt": "2019-11-13T19:20:09.795Z",
           "sets": [
             {
               "duration": null,
@@ -1267,130 +1339,131 @@
   ],
   "routines": [
     {
-      "id": "_ecew8dlx",
-      "createdAt": "2019-11-13T02:03:52.823Z",
+      "id": "_r8cqqd0g",
+      "createdAt": "2019-11-13T19:20:09.795Z",
       "name": "Chest and Triceps",
       "exerciseIds": [
-        "_99jthoou",
-        "_01ap254z",
-        "_f44e4ye9",
-        "_glbs46r3",
-        "_jenz5qsp",
-        "_ms4cax09",
-        "_4nim2je8",
-        "_o5yg5l1g"
+        "_4zrwf7x4",
+        "_6ljv9nzo",
+        "_9kll3q1p",
+        "_4yntcysn",
+        "_vptsonw1",
+        "_og067oux",
+        "_n38e1htx",
+        "_tf9jihgu"
       ],
       "routineRecords": []
     },
     {
-      "id": "_ku2f9c0j",
-      "createdAt": "2019-11-13T02:03:52.823Z",
+      "id": "_6qzjvcej",
+      "createdAt": "2019-11-13T19:20:09.795Z",
       "name": "Back and Biceps",
       "exerciseIds": [
-        "_99jthoou",
-        "_lybh26bn",
-        "_7k5e5og9",
-        "_3zli75d9",
-        "_tluqk492",
-        "_0elajh4r",
-        "_rapqcotf",
-        "_526w8sl6",
-        "_o5yg5l1g"
+        "_4zrwf7x4",
+        "_jlllppfs",
+        "_f0y58nov",
+        "_dawrxtg4",
+        "_te4ivb3g",
+        "_nusfgy49",
+        "_36iyn8oj",
+        "_vdlb1dv7",
+        "_tf9jihgu"
       ],
       "routineRecords": []
     },
     {
-      "id": "_x1hhcjh7",
-      "createdAt": "2019-11-13T02:03:52.823Z",
+      "id": "_d8lpg688",
+      "createdAt": "2019-11-13T19:20:09.795Z",
       "name": "Legs, Shoulders, and Core",
       "exerciseIds": [
-        "_99jthoou",
-        "_2iugyeyn",
-        "_ocx2yqd2",
-        "_0ysnybww",
-        "_8kkjmfsp",
-        "_634d396s",
-        "_tgbuhjan",
-        "_avesbyhn",
-        "_a5dwo19o",
-        "_fi810byg",
-        "_836nujnq",
-        "_y9m2k3t5",
-        "_qsjs3usn",
-        "_o5yg5l1g"
+        "_4zrwf7x4",
+        "_z7mlczq4",
+        "_jd8vpo12",
+        "_799p6by6",
+        "_1qslnux6",
+        "_shiuoevh",
+        "_y41r9jxh",
+        "_zceggz20",
+        "_t1qd4reu",
+        "_ki3n6j07",
+        "_oapiegvw",
+        "_f2nxrdwa",
+        "_b3zm5q4u",
+        "_tf9jihgu"
       ],
       "routineRecords": []
     },
     {
-      "id": "_cqqt5wnq",
-      "createdAt": "2019-11-13T02:03:52.823Z",
+      "id": "_kmbfwabc",
+      "createdAt": "2019-11-13T19:20:09.795Z",
       "name": "Chest Only",
       "exerciseIds": [
-        "_99jthoou",
-        "_01ap254z",
-        "_f44e4ye9",
-        "_glbs46r3",
-        "_jenz5qsp",
-        "_o5yg5l1g"
+        "_4zrwf7x4",
+        "_6ljv9nzo",
+        "_9kll3q1p",
+        "_4yntcysn",
+        "_vptsonw1",
+        "_tf9jihgu"
       ],
       "routineRecords": []
     },
     {
-      "id": "_tytceup4",
-      "createdAt": "2019-11-13T02:03:52.823Z",
+      "id": "_btfoo8xu",
+      "createdAt": "2019-11-13T19:20:09.795Z",
       "name": "Back Only",
       "exerciseIds": [
-        "_99jthoou",
-        "_lybh26bn",
-        "_7k5e5og9",
-        "_3zli75d9",
-        "_tluqk492",
-        "_o5yg5l1g"
+        "_4zrwf7x4",
+        "_jlllppfs",
+        "_f0y58nov",
+        "_dawrxtg4",
+        "_te4ivb3g",
+        "_tf9jihgu"
       ],
       "routineRecords": []
     },
     {
-      "id": "_kirzb7el",
-      "createdAt": "2019-11-13T02:03:52.823Z",
+      "id": "_md8pefrr",
+      "createdAt": "2019-11-13T19:20:09.795Z",
       "name": "Legs Only",
       "exerciseIds": [
-        "_99jthoou",
-        "_8kkjmfsp",
-        "_634d396s",
-        "_tgbuhjan",
-        "_avesbyhn",
-        "_a5dwo19o",
-        "_fi810byg",
-        "_836nujnq",
-        "_o5yg5l1g"
+        "_4zrwf7x4",
+        "_1qslnux6",
+        "_shiuoevh",
+        "_y41r9jxh",
+        "_zceggz20",
+        "_t1qd4reu",
+        "_ki3n6j07",
+        "_oapiegvw",
+        "_tf9jihgu"
       ],
       "routineRecords": []
     },
     {
-      "id": "_ubcg2mwf",
-      "createdAt": "2019-11-13T02:03:52.823Z",
+      "id": "_35tnmy57",
+      "createdAt": "2019-11-13T19:20:09.795Z",
       "name": "Arms and Core",
       "exerciseIds": [
-        "_99jthoou",
-        "_2iugyeyn",
-        "_ocx2yqd2",
-        "_0ysnybww",
-        "_0elajh4r",
-        "_ms4cax09",
-        "_rapqcotf",
-        "_4nim2je8",
-        "_526w8sl6",
-        "_y9m2k3t5",
-        "_qsjs3usn",
-        "_o5yg5l1g"
+        "_4zrwf7x4",
+        "_z7mlczq4",
+        "_jd8vpo12",
+        "_799p6by6",
+        "_nusfgy49",
+        "_og067oux",
+        "_36iyn8oj",
+        "_zj5oq9pf",
+        "_n38e1htx",
+        "_vdlb1dv7",
+        "_f2nxrdwa",
+        "_b3zm5q4u",
+        "_tf9jihgu"
       ],
       "routineRecords": []
     },
     {
-      "id": "_cs7nboeq",
-      "createdAt": "2019-11-13T02:03:52.823Z",
-      "name": "General Cardio",
-      "exerciseIds": ["_hsnaxjh8", "_o5yg5l1g"],
+      "id": "_9z7dp8me",
+      "createdAt": "2019-11-13T19:20:09.795Z",
+      "name": "Cardio Day",
+      "exerciseIds": ["_nw4i00al", "_pqgx34j8", "_tf9jihgu"],
       "routineRecords": []
     }
   ]

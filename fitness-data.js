@@ -1,12 +1,12 @@
 "use strict";
 
 // ENUMS #######################################################################
-const _UnitPref = Object.freeze({
+const UnitPrefEnum = Object.freeze({
   IMPERIAL: "Imperial",
   METRIC: "Metric"
 });
 
-const _Category = Object.freeze({
+const CategoryEnum = Object.freeze({
   CARDIO: "Cardio",
   MISC: "Miscellaneous",
   CHEST: "Chest",
@@ -18,151 +18,7 @@ const _Category = Object.freeze({
   CORE: "Core"
 });
 
-// @TODO: Add exercise descriptions
-const _Exercise = Object.freeze({
-  ELLIPTICAL_WARMUP: {
-    name: "Elliptical, Warmup",
-    category: _Category.CARDIO,
-    desc: ""
-  },
-  ELLIPTICAL_INTERVAL: {
-    name: "Elliptical, Intervals",
-    category: _Category.ELLIPTICAL_INTERVAL,
-    desc: ""
-  },
-  STRETCHING: {
-    name: "Stretching",
-    category: _Category.MISC,
-    desc: ""
-  },
-  FLAT_BENCH_PRESS: {
-    name: "Flat Bench Press",
-    category: _Category.CHEST,
-    desc: ""
-  },
-  INCLINE_BENCH_PRESS: {
-    name: "Incline Bench Press",
-    category: _Category.CHEST,
-    desc: ""
-  },
-  DECLINE_BENCH_PRESS: {
-    name: "Decline Bench Press",
-    category: _Category.CHEST,
-    desc: ""
-  },
-  FLY_MACHINE_CHEST: {
-    name: "Fly Machine (Chest)",
-    category: _Category.CHEST,
-    desc: ""
-  },
-  CABLE_TRICEP_PULLDOWNS: {
-    name: "Cable Tricep Pulldowns",
-    category: _Category.TRICEPS,
-    desc: ""
-  },
-  TRICEP_PRESS_MACHINE: {
-    name: "Tricep Press Machine",
-    category: _Category.TRICEPS,
-    desc: ""
-  },
-  BENT_OVER_ROWS: {
-    name: "Bent Over Rows",
-    category: _Category.BACK,
-    desc: ""
-  },
-  SHRUGS: {
-    name: "Shrugs",
-    category: _Category.BACK,
-    desc: ""
-  },
-  STIFF_LEG_DEADLIFTS: {
-    name: "Stiff-Leg Deadlifts",
-    category: _Category.BACK,
-    desc: ""
-  },
-  ASSISTED_PULL_UPS: {
-    name: "Assisted Pull-ups",
-    category: _Category.BACK,
-    desc: ""
-  },
-  UNDERHAND_CURLS: {
-    name: "Underhand Curls",
-    category: _Category.BICEPS,
-    desc: ""
-  },
-  HAMMER_CURLS: {
-    name: "Hammer Curls",
-    category: _Category.BICEPS,
-    desc: ""
-  },
-  OVERHAND_CURLS: {
-    name: "Overhand Curls",
-    category: _Category.BICEPS,
-    desc: ""
-  },
-  SIDE_RAISES: {
-    name: "Side Raises",
-    category: _Category.SHOULDERS,
-    desc: ""
-  },
-  FRONT_RAISES: {
-    name: "Front Raises",
-    category: _Category.SHOULDERS,
-    desc: ""
-  },
-  SHOULDER_PRESS_MACHINE: {
-    name: "Shoulder Press Machine",
-    category: _Category.SHOULDERS,
-    desc: ""
-  },
-  LEG_PRESS_MACHINE: {
-    name: "Leg Press Machine",
-    category: _Category.LEGS,
-    desc: ""
-  },
-  LEG_EXTENSION_MACHINE: {
-    name: "Leg Extension Machine",
-    category: _Category.LEGS,
-    desc: ""
-  },
-  LEG_CURL_MACHINE: {
-    name: "Leg Curl Machine",
-    category: _Category.LEGS,
-    desc: ""
-  },
-  CALF_EXTENSION_MACHINE: {
-    name: "Calf Extension Machine",
-    category: _Category.LEGS,
-    desc: ""
-  },
-  HIP_ABDUCTION_MACHINE: {
-    name: "Hip Abduction (Out) Machine",
-    category: _Category.LEGS,
-    desc: ""
-  },
-  HIP_ADDUCTION_MACHINE: {
-    name: "Hip Adduction (In) Machine",
-    category: _Category.LEGS,
-    desc: ""
-  },
-  STANDING_GLUTE_MACHINE: {
-    name: "Standing Glute Machine",
-    category: _Category.LEGS,
-    desc: ""
-  },
-  ABDOMINAL_CRUNCH_MACHINE: {
-    name: "Abdominal Crunch Machine",
-    category: _Category.CORE,
-    desc: ""
-  },
-  OBLIQUE_SIDE_BEND: {
-    name: "Oblique Side Bend",
-    category: _Category.CORE,
-    desc: ""
-  }
-});
-
-const _Objective = Object.freeze({
+const ObjectiveEnum = Object.freeze({
   NOTES: "Notes",
   REST: "Rest",
   TEMPO: "Tempo",
@@ -171,17 +27,223 @@ const _Objective = Object.freeze({
   INCLINE: "Incline"
 });
 
-const _Intensity = Object.freeze({
+const IntensityEnum = Object.freeze({
   HIGH: "High",
   MEDIUM: "Medium",
   LOW: "Low"
 });
 
-const _Tempo = Object.freeze({
+const TempoEnum = Object.freeze({
   FAST: "Fast",
   NORMAL: "Normal",
   SLOW: "Slow"
 });
+
+const InputsEnum = Object.freeze({
+  CARDIO: {
+    hasNotes: true,
+    hasDuration: true,
+    hasDistance: true,
+    hasWeight: false,
+    hasReps: false
+  },
+  MISC: {
+    hasNotes: true,
+    hasDuration: true,
+    hasDistance: false,
+    hasWeight: false,
+    hasReps: false
+  },
+  WEIGHT: {
+    hasNotes: true,
+    hasDuration: false,
+    hasDistance: false,
+    hasWeight: true,
+    hasReps: true
+  }
+});
+
+const ExerciseEnum = Object.freeze({
+  ELLIPTICAL_WARMUP: {
+    name: "Elliptical, Warmup",
+    category: CategoryEnum.CARDIO,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.CARDIO
+  },
+  ELLIPTICAL_INTERVAL: {
+    name: "Elliptical, Intervals",
+    category: CategoryEnum.CARDIO,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.CARDIO
+  },
+  STEPPER: {
+    name: "Stepper Machine",
+    category: CategoryEnum.CARDIO,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.MISC
+  },
+  STRETCHING: {
+    name: "Stretching",
+    category: CategoryEnum.MISC,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.MISC
+  },
+  FLAT_BENCH_PRESS: {
+    name: "Flat Bench Press",
+    category: CategoryEnum.CHEST,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  INCLINE_BENCH_PRESS: {
+    name: "Incline Bench Press",
+    category: CategoryEnum.CHEST,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  DECLINE_BENCH_PRESS: {
+    name: "Decline Bench Press",
+    category: CategoryEnum.CHEST,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  FLY_MACHINE_CHEST: {
+    name: "Fly Machine (Chest)",
+    category: CategoryEnum.CHEST,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  SKULL_CRUSHERS: {
+    name: "Skull Crushers",
+    category: CategoryEnum.TRICEPS,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  CABLE_TRICEP_PULLDOWNS: {
+    name: "Cable Tricep Pulldowns",
+    category: CategoryEnum.TRICEPS,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  TRICEP_PRESS_MACHINE: {
+    name: "Tricep Press Machine",
+    category: CategoryEnum.TRICEPS,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  BENT_OVER_ROWS: {
+    name: "Bent Over Rows",
+    category: CategoryEnum.BACK,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  SHRUGS: {
+    name: "Shrugs",
+    category: CategoryEnum.BACK,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  STIFF_LEG_DEADLIFTS: {
+    name: "Stiff Leg Deadlift",
+    category: CategoryEnum.BACK,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  ASSISTED_PULL_UPS: {
+    name: "Assisted Pull-ups",
+    category: CategoryEnum.BACK,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  OVERHAND_CURLS: {
+    name: "Overhand Curls",
+    category: CategoryEnum.BICEPS,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  UNDERHAND_CURLS: {
+    name: "Underhand Curls",
+    category: CategoryEnum.BICEPS,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  HAMMER_CURLS: {
+    name: "Hammer Curls",
+    category: CategoryEnum.BICEPS,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  SIDE_RAISES: {
+    name: "Side Raises",
+    category: CategoryEnum.SHOULDERS,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  FRONT_RAISES: {
+    name: "Front Raises",
+    category: CategoryEnum.SHOULDERS,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  SHOULDER_PRESS_MACHINE: {
+    name: "Shoulder Press Machine",
+    category: CategoryEnum.SHOULDERS,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  LEG_PRESS_MACHINE: {
+    name: "Leg Press Machine",
+    category: CategoryEnum.LEGS,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  LEG_EXTENSION_MACHINE: {
+    name: "Leg Extension Machine",
+    category: CategoryEnum.LEGS,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  LEG_CURL_MACHINE: {
+    name: "Leg Curl Machine",
+    category: CategoryEnum.LEGS,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  CALF_EXTENSION_MACHINE: {
+    name: "Calf Extension Machine",
+    category: CategoryEnum.LEGS,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  STANDING_GLUTE_MACHINE: {
+    name: "Standing Glute Machine",
+    category: CategoryEnum.LEGS,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  HIP_ABDUCTION_MACHINE: {
+    name: "Hip Abduction (Out) Machine",
+    category: CategoryEnum.LEGS,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  HIP_ADDUCTION_MACHINE: {
+    name: "Hip Adduction (in) Machine",
+    category: CategoryEnum.LEGS,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  ABDOMINAL_CRUNCH_MACHINE: {
+    name: "Abdominal Crunch Machine",
+    category: CategoryEnum.CORE,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+  },
+  OBLIQUE_SIDE_BEND: {
+    name: "Oblique Side Bends",
+    category: CategoryEnum.CORE,
+    desc: "PLACEHOLDER",
+    inputs: InputsEnum.WEIGHT
+}});
 
 // FUNCTIONS ###################################################################
 function createId() {
@@ -316,617 +378,651 @@ class RoutineRecord {
     this.weightMoved = weightMoved;
   };
 };
-
 // BUILD #######################################################################
 var fitness_data = {
   exercises: [],
   routines: []
 };
 
-// Build exercises and records
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.ELLIPTICAL_WARMUP.name,
-    _Exercise.ELLIPTICAL_WARMUP.category,
-    _Exercise.ELLIPTICAL_WARMUP.desc,
-  new Inputs(true, true, true, false, false), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.INTENSITY, _Intensity.MEDIUM),
-    new Objective(_Objective.RESISTENCE, "8/20"),
-    new Objective(_Objective.INCLINE, "0/20")
-  ], [
-    new ExerciseRecord([
-      new OneSet(420, new DistanceUnits(_UnitPref.IMPERIAL, 0.5), null, null)
-    ])
-  ]));
+// Building EXERCISES - name, category, desc, inputs
+Object.values(ExerciseEnum).forEach( exer => {
+  fitness_data.exercises.push(
+    new Exercise(exer.name, exer.category, exer.desc, exer.inputs)
+  );
+});
 
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.ELLIPTICAL_INTERVAL.name,
-    _Exercise.ELLIPTICAL_INTERVAL.category,
-    _Exercise.ELLIPTICAL_INTERVAL.desc,
-  new Inputs(true, true, true, false, false), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.INTENSITY, _Intensity.HIGH),
-    new Objective(_Objective.RESISTENCE, "8/20"),
-    new Objective(_Objective.INCLINE, "0/20")
-  ], [
-    new ExerciseRecord([
-      new OneSet(1440, new DistanceUnits(_UnitPref.IMPERIAL, 2), null, null)
-    ])
-  ]));
+// Building EXERCISES - objectives
+fitness_data.exercises.forEach( exer => {
+  switch (exer.name) {
+    case ExerciseEnum.ELLIPTICAL_WARMUP.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.MEDIUM),
+        new Objective(ObjectiveEnum.RESISTENCE, "8/20"),
+        new Objective(ObjectiveEnum.INCLINE, "0/20")
+      ];
+      break;
+    case ExerciseEnum.ELLIPTICAL_INTERVAL.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH),
+        new Objective(ObjectiveEnum.RESISTENCE, "8/20"),
+        new Objective(ObjectiveEnum.INCLINE, "0/20")
+      ];
+      break;
+    case ExerciseEnum.STEPPER.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.STRETCHING.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.MEDIUM),
+      ];
+      break;
+    case ExerciseEnum.FLAT_BENCH_PRESS.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "3m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.INCLINE_BENCH_PRESS.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "3m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.DECLINE_BENCH_PRESS.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "3m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.FLY_MACHINE_CHEST.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "2m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.SLOW),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.SKULL_CRUSHERS.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "1m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.MEDIUM)
+      ];
+      break;
+    case ExerciseEnum.CABLE_TRICEP_PULLDOWNS.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "2m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.TRICEP_PRESS_MACHINE.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "2m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.BENT_OVER_ROWS.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "3m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.SHRUGS.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "3m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.STIFF_LEG_DEADLIFTS.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "3m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.ASSISTED_PULL_UPS.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "2m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.OVERHAND_CURLS.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "1m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.MEDIUM)
+      ];
+      break;
+    case ExerciseEnum.UNDERHAND_CURLS.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "2m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.HAMMER_CURLS.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "2m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.SIDE_RAISES.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "1m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.FRONT_RAISES.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "1m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.SHOULDER_PRESS_MACHINE.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "2m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.LEG_PRESS_MACHINE.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "1m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.LEG_EXTENSION_MACHINE.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "1m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.LEG_CURL_MACHINE.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "1m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.CALF_EXTENSION_MACHINE.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "1m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.STANDING_GLUTE_MACHINE.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "1m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.HIP_ABDUCTION_MACHINE.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "1m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.HIP_ADDUCTION_MACHINE.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "1m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.ABDOMINAL_CRUNCH_MACHINE.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "2m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    case ExerciseEnum.OBLIQUE_SIDE_BEND.name:
+      exer.objectives = [
+        new Objective(ObjectiveEnum.NOTES, ObjectiveEnum.NOTES),
+        new Objective(ObjectiveEnum.REST, "1m"),
+        new Objective(ObjectiveEnum.TEMPO, TempoEnum.NORMAL),
+        new Objective(ObjectiveEnum.INTENSITY, IntensityEnum.HIGH)
+      ];
+      break;
+    default:
+      exer.objectives = [];
+      break;
+  }
+});
 
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.STRETCHING.name,
-    _Exercise.STRETCHING.category,
-    _Exercise.STRETCHING.desc,
-  new Inputs(true, true, false, false, false), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.INTENSITY, _Intensity.MEDIUM),
-  ], [
-    new ExerciseRecord([
-      new OneSet(540, null, null, null)
-    ])
-  ]));
+// Building EXERCISES - records
+fitness_data.exercises.forEach( exer => {
+  switch (exer.name) {
+    case ExerciseEnum.ELLIPTICAL_WARMUP.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(420, new DistanceUnits(UnitPrefEnum.IMPERIAL, 0.5), null, null)
+        ])
+      ];
+      break;
+    case ExerciseEnum.ELLIPTICAL_INTERVAL.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(1440, new DistanceUnits(UnitPrefEnum.IMPERIAL, 2), null, null)
+        ])
+      ];
+      break;
+    case ExerciseEnum.STEPPER.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(600, null, null, null)
+        ])
+      ];
+      break;
+    case ExerciseEnum.STRETCHING.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(540, null, null, null)
+        ])
+      ];
+      break;
+    case ExerciseEnum.FLAT_BENCH_PRESS.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 130), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 130), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 130), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 130), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.INCLINE_BENCH_PRESS.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 75), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 75), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 75), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 75), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.DECLINE_BENCH_PRESS.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 130), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 130), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 130), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 130), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.FLY_MACHINE_CHEST.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 120), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 120), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 120), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.SKULL_CRUSHERS.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 40), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 40), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 40), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.CABLE_TRICEP_PULLDOWNS.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 42.5), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 42.5), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 42.5), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.TRICEP_PRESS_MACHINE.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 190), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 190), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 190), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.BENT_OVER_ROWS.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 120), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 120), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 120), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 120), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.SHRUGS.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 190), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 190), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 190), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 190), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.STIFF_LEG_DEADLIFTS.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 120), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 120), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 120), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 120), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.ASSISTED_PULL_UPS.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, -25), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, -25), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, -25), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.OVERHAND_CURLS.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 15), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 15), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 15), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.UNDERHAND_CURLS.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 30), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 30), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 30), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.HAMMER_CURLS.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 30), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 30), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 30), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.SIDE_RAISES.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 10), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 10), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 10), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.FRONT_RAISES.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 10), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 10), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 10), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.SHOULDER_PRESS_MACHINE.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 60), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 60), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 60), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.LEG_PRESS_MACHINE.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 175), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 175), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 175), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.LEG_EXTENSION_MACHINE.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 90), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 90), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 90), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.LEG_CURL_MACHINE.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 90), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 90), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 90), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.CALF_EXTENSION_MACHINE.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 175), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 175), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 175), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.STANDING_GLUTE_MACHINE.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 125), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 125), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 125), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.HIP_ABDUCTION_MACHINE.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 200), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 200), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 200), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.HIP_ADDUCTION_MACHINE.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 165), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 165), 10),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 165), 10)
+        ])
+      ];
+      break;
+    case ExerciseEnum.ABDOMINAL_CRUNCH_MACHINE.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 35), 25),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 35), 25),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 35), 25),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 35), 25)
+        ])
+      ];
+      break;
+    case ExerciseEnum.OBLIQUE_SIDE_BEND.name:
+      exer.exerciseRecords = [
+        new ExerciseRecord([
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 45), 25),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 45), 25),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 45), 25),
+          new OneSet(null, null, new WeightUnits(UnitPrefEnum.IMPERIAL, 45), 25)
+        ])
+      ];
+      break;
+    default:
+      exer.exerciseRecords = [];
+      break;
+  }
+});
 
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.FLAT_BENCH_PRESS.name,
-    _Exercise.FLAT_BENCH_PRESS.category,
-    _Exercise.FLAT_BENCH_PRESS.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "2m"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.HIGH)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 130), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 130), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 130), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 130), 10)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.INCLINE_BENCH_PRESS.name,
-    _Exercise.INCLINE_BENCH_PRESS.category,
-    _Exercise.INCLINE_BENCH_PRESS.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "2m"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.HIGH)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 75), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 75), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 75), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 75), 10)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.DECLINE_BENCH_PRESS.name,
-    _Exercise.DECLINE_BENCH_PRESS.category,
-    _Exercise.DECLINE_BENCH_PRESS.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "2m"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.HIGH)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 130), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 130), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 130), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 130), 10)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.FLY_MACHINE_CHEST.name,
-    _Exercise.FLY_MACHINE_CHEST.category,
-    _Exercise.FLY_MACHINE_CHEST.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "2m"),
-    new Objective(_Objective.TEMPO, _Tempo.SLOW),
-    new Objective(_Objective.INTENSITY, _Intensity.HIGH)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.CABLE_TRICEP_PULLDOWNS.name,
-    _Exercise.CABLE_TRICEP_PULLDOWNS.category,
-    _Exercise.CABLE_TRICEP_PULLDOWNS.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "1m 30s"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.HIGH)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 42.5), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 42.5), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 42.5), 10)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.TRICEP_PRESS_MACHINE.name,
-    _Exercise.TRICEP_PRESS_MACHINE.category,
-    _Exercise.TRICEP_PRESS_MACHINE.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "1m 30s"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.HIGH)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 190), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 190), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 190), 10)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.BENT_OVER_ROWS.name,
-    _Exercise.BENT_OVER_ROWS.category,
-    _Exercise.BENT_OVER_ROWS.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "2m"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.HIGH)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.SHRUGS.name,
-    _Exercise.SHRUGS.category,
-    _Exercise.SHRUGS.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "2m"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.HIGH)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 190), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 190), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 190), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 190), 10)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.STIFF_LEG_DEADLIFTS.name,
-    _Exercise.STIFF_LEG_DEADLIFTS.category,
-    _Exercise.STIFF_LEG_DEADLIFTS.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "2m"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.HIGH)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.ASSISTED_PULL_UPS.name,
-    _Exercise.ASSISTED_PULL_UPS.category,
-    _Exercise.ASSISTED_PULL_UPS.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "2m"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.HIGH)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, -25), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, -25), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, -25), 10)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.OVERHAND_CURLS.name,
-    _Exercise.OVERHAND_CURLS.category,
-    _Exercise.OVERHAND_CURLS.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "2m"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 15), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 15), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 15), 10)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.UNDERHAND_CURLS.name,
-    _Exercise.UNDERHAND_CURLS.category,
-    _Exercise.UNDERHAND_CURLS.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "2m"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.HIGH)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 30), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 30), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 30), 10)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.HAMMER_CURLS.name,
-    _Exercise.HAMMER_CURLS.category,
-    _Exercise.HAMMER_CURLS.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "2m"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.HIGH)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 30), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 30), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 30), 10)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.SIDE_RAISES.name,
-    _Exercise.SIDE_RAISES.category,
-    _Exercise.SIDE_RAISES.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "1m"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.HIGH)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 10), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 10), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 10), 10)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.FRONT_RAISES.name,
-    _Exercise.FRONT_RAISES.category,
-    _Exercise.FRONT_RAISES.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "1m"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.HIGH)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 10), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 10), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 10), 10)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.SHOULDER_PRESS_MACHINE.name,
-    _Exercise.SHOULDER_PRESS_MACHINE.category,
-    _Exercise.SHOULDER_PRESS_MACHINE.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "2m"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.HIGH)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 60), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 60), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 60), 10)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.LEG_PRESS_MACHINE.name,
-    _Exercise.LEG_PRESS_MACHINE.category,
-    _Exercise.LEG_PRESS_MACHINE.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "1m"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 175), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 175), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 175), 10)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.LEG_EXTENSION_MACHINE.name,
-    _Exercise.LEG_EXTENSION_MACHINE.category,
-    _Exercise.LEG_EXTENSION_MACHINE.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "1m"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 90), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 90), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 90), 10)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.LEG_CURL_MACHINE.name,
-    _Exercise.LEG_CURL_MACHINE.category,
-    _Exercise.LEG_CURL_MACHINE.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "1m"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 90), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 90), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 90), 10)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.CALF_EXTENSION_MACHINE.name,
-    _Exercise.CALF_EXTENSION_MACHINE.category,
-    _Exercise.CALF_EXTENSION_MACHINE.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "1m"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 175), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 175), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 175), 10)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.STANDING_GLUTE_MACHINE.name,
-    _Exercise.STANDING_GLUTE_MACHINE.category,
-    _Exercise.STANDING_GLUTE_MACHINE.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "1m"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.HIGH)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 125), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 125), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 125), 10)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.HIP_ABDUCTION_MACHINE.name,
-    _Exercise.HIP_ABDUCTION_MACHINE.category,
-    _Exercise.HIP_ABDUCTION_MACHINE.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "1m"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 200), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 200), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 200), 10)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.HIP_ADDUCTION_MACHINE.name,
-    _Exercise.HIP_ADDUCTION_MACHINE.category,
-    _Exercise.HIP_ADDUCTION_MACHINE.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "1m"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 165), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 165), 10),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 165), 10)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.ABDOMINAL_CRUNCH_MACHINE.name,
-    _Exercise.ABDOMINAL_CRUNCH_MACHINE.category,
-    _Exercise.ABDOMINAL_CRUNCH_MACHINE.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "2m"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.HIGH)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 35), 25),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 35), 25),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 35), 25),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 35), 25)
-    ])
-  ]));
-
-fitness_data.exercises.push(
-  new Exercise(
-    _Exercise.OBLIQUE_SIDE_BEND.name,
-    _Exercise.OBLIQUE_SIDE_BEND.category,
-    _Exercise.OBLIQUE_SIDE_BEND.desc,
-  new Inputs(true, false, false, true, true), [
-    new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.REST, "1m"),
-    new Objective(_Objective.TEMPO, _Tempo.NORMAL),
-    new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
-  ], [
-    new ExerciseRecord([
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 45), 25),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 45), 25),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 45), 25),
-      new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 45), 25)
-    ])
-  ]));
-
-// Build routines
+// Build ROUTINES
 fitness_data.routines.push(
   new Routine("Chest and Triceps", [
-    getExerciseIdByName(_Exercise.ELLIPTICAL_WARMUP.name),
-    getExerciseIdByName(_Exercise.FLAT_BENCH_PRESS.name),
-    getExerciseIdByName(_Exercise.INCLINE_BENCH_PRESS.name),
-    getExerciseIdByName(_Exercise.DECLINE_BENCH_PRESS.name),
-    getExerciseIdByName(_Exercise.FLY_MACHINE_CHEST.name),
-    getExerciseIdByName(_Exercise.CABLE_TRICEP_PULLDOWNS.name),
-    getExerciseIdByName(_Exercise.TRICEP_PRESS_MACHINE.name),
-    getExerciseIdByName(_Exercise.STRETCHING.name)
-  ]));
+    getExerciseIdByName(ExerciseEnum.ELLIPTICAL_WARMUP.name),
+    getExerciseIdByName(ExerciseEnum.FLAT_BENCH_PRESS.name),
+    getExerciseIdByName(ExerciseEnum.INCLINE_BENCH_PRESS.name),
+    getExerciseIdByName(ExerciseEnum.DECLINE_BENCH_PRESS.name),
+    getExerciseIdByName(ExerciseEnum.FLY_MACHINE_CHEST.name),
+    getExerciseIdByName(ExerciseEnum.CABLE_TRICEP_PULLDOWNS.name),
+    getExerciseIdByName(ExerciseEnum.TRICEP_PRESS_MACHINE.name),
+    getExerciseIdByName(ExerciseEnum.STRETCHING.name)
+  ]
+));
 
 fitness_data.routines.push(
   new Routine("Back and Biceps", [
-    getExerciseIdByName(_Exercise.ELLIPTICAL_WARMUP.name),
-    getExerciseIdByName(_Exercise.BENT_OVER_ROWS.name),
-    getExerciseIdByName(_Exercise.SHRUGS.name),
-    getExerciseIdByName(_Exercise.STIFF_LEG_DEADLIFTS.name),
-    getExerciseIdByName(_Exercise.ASSISTED_PULL_UPS.name),
-    getExerciseIdByName(_Exercise.OVERHAND_CURLS.name),
-    getExerciseIdByName(_Exercise.UNDERHAND_CURLS.name),
-    getExerciseIdByName(_Exercise.HAMMER_CURLS.name),
-    getExerciseIdByName(_Exercise.STRETCHING.name)
-  ]));
+    getExerciseIdByName(ExerciseEnum.ELLIPTICAL_WARMUP.name),
+    getExerciseIdByName(ExerciseEnum.BENT_OVER_ROWS.name),
+    getExerciseIdByName(ExerciseEnum.SHRUGS.name),
+    getExerciseIdByName(ExerciseEnum.STIFF_LEG_DEADLIFTS.name),
+    getExerciseIdByName(ExerciseEnum.ASSISTED_PULL_UPS.name),
+    getExerciseIdByName(ExerciseEnum.OVERHAND_CURLS.name),
+    getExerciseIdByName(ExerciseEnum.UNDERHAND_CURLS.name),
+    getExerciseIdByName(ExerciseEnum.HAMMER_CURLS.name),
+    getExerciseIdByName(ExerciseEnum.STRETCHING.name)
+  ]
+));
 
 fitness_data.routines.push(
   new Routine("Legs, Shoulders, and Core", [
-    getExerciseIdByName(_Exercise.ELLIPTICAL_WARMUP.name),
-    getExerciseIdByName(_Exercise.SIDE_RAISES.name),
-    getExerciseIdByName(_Exercise.FRONT_RAISES.name),
-    getExerciseIdByName(_Exercise.SHOULDER_PRESS_MACHINE.name),
-    getExerciseIdByName(_Exercise.LEG_PRESS_MACHINE.name),
-    getExerciseIdByName(_Exercise.LEG_EXTENSION_MACHINE.name),
-    getExerciseIdByName(_Exercise.LEG_CURL_MACHINE.name),
-    getExerciseIdByName(_Exercise.CALF_EXTENSION_MACHINE.name),
-    getExerciseIdByName(_Exercise.STANDING_GLUTE_MACHINE.name),
-    getExerciseIdByName(_Exercise.HIP_ABDUCTION_MACHINE.name),
-    getExerciseIdByName(_Exercise.HIP_ADDUCTION_MACHINE.name),
-    getExerciseIdByName(_Exercise.ABDOMINAL_CRUNCH_MACHINE.name),
-    getExerciseIdByName(_Exercise.OBLIQUE_SIDE_BEND.name),
-    getExerciseIdByName(_Exercise.STRETCHING.name)
-  ]));
+    getExerciseIdByName(ExerciseEnum.ELLIPTICAL_WARMUP.name),
+    getExerciseIdByName(ExerciseEnum.SIDE_RAISES.name),
+    getExerciseIdByName(ExerciseEnum.FRONT_RAISES.name),
+    getExerciseIdByName(ExerciseEnum.SHOULDER_PRESS_MACHINE.name),
+    getExerciseIdByName(ExerciseEnum.LEG_PRESS_MACHINE.name),
+    getExerciseIdByName(ExerciseEnum.LEG_EXTENSION_MACHINE.name),
+    getExerciseIdByName(ExerciseEnum.LEG_CURL_MACHINE.name),
+    getExerciseIdByName(ExerciseEnum.CALF_EXTENSION_MACHINE.name),
+    getExerciseIdByName(ExerciseEnum.STANDING_GLUTE_MACHINE.name),
+    getExerciseIdByName(ExerciseEnum.HIP_ABDUCTION_MACHINE.name),
+    getExerciseIdByName(ExerciseEnum.HIP_ADDUCTION_MACHINE.name),
+    getExerciseIdByName(ExerciseEnum.ABDOMINAL_CRUNCH_MACHINE.name),
+    getExerciseIdByName(ExerciseEnum.OBLIQUE_SIDE_BEND.name),
+    getExerciseIdByName(ExerciseEnum.STRETCHING.name)
+  ]
+));
 
 fitness_data.routines.push(
   new Routine("Chest Only", [
-    getExerciseIdByName(_Exercise.ELLIPTICAL_WARMUP.name),
-    getExerciseIdByName(_Exercise.FLAT_BENCH_PRESS.name),
-    getExerciseIdByName(_Exercise.INCLINE_BENCH_PRESS.name),
-    getExerciseIdByName(_Exercise.DECLINE_BENCH_PRESS.name),
-    getExerciseIdByName(_Exercise.FLY_MACHINE_CHEST.name),
-    getExerciseIdByName(_Exercise.STRETCHING.name)
-  ]));
+    getExerciseIdByName(ExerciseEnum.ELLIPTICAL_WARMUP.name),
+    getExerciseIdByName(ExerciseEnum.FLAT_BENCH_PRESS.name),
+    getExerciseIdByName(ExerciseEnum.INCLINE_BENCH_PRESS.name),
+    getExerciseIdByName(ExerciseEnum.DECLINE_BENCH_PRESS.name),
+    getExerciseIdByName(ExerciseEnum.FLY_MACHINE_CHEST.name),
+    getExerciseIdByName(ExerciseEnum.STRETCHING.name)
+  ]
+));
 
 fitness_data.routines.push(
   new Routine("Back Only", [
-    getExerciseIdByName(_Exercise.ELLIPTICAL_WARMUP.name),
-    getExerciseIdByName(_Exercise.BENT_OVER_ROWS.name),
-    getExerciseIdByName(_Exercise.SHRUGS.name),
-    getExerciseIdByName(_Exercise.STIFF_LEG_DEADLIFTS.name),
-    getExerciseIdByName(_Exercise.ASSISTED_PULL_UPS.name),
-    getExerciseIdByName(_Exercise.STRETCHING.name)
-  ]));
+    getExerciseIdByName(ExerciseEnum.ELLIPTICAL_WARMUP.name),
+    getExerciseIdByName(ExerciseEnum.BENT_OVER_ROWS.name),
+    getExerciseIdByName(ExerciseEnum.SHRUGS.name),
+    getExerciseIdByName(ExerciseEnum.STIFF_LEG_DEADLIFTS.name),
+    getExerciseIdByName(ExerciseEnum.ASSISTED_PULL_UPS.name),
+    getExerciseIdByName(ExerciseEnum.STRETCHING.name)
+  ]
+));
 
 fitness_data.routines.push(
   new Routine("Legs Only", [
-    getExerciseIdByName(_Exercise.ELLIPTICAL_WARMUP.name),
-    getExerciseIdByName(_Exercise.LEG_PRESS_MACHINE.name),
-    getExerciseIdByName(_Exercise.LEG_EXTENSION_MACHINE.name),
-    getExerciseIdByName(_Exercise.LEG_CURL_MACHINE.name),
-    getExerciseIdByName(_Exercise.CALF_EXTENSION_MACHINE.name),
-    getExerciseIdByName(_Exercise.STANDING_GLUTE_MACHINE.name),
-    getExerciseIdByName(_Exercise.HIP_ABDUCTION_MACHINE.name),
-    getExerciseIdByName(_Exercise.HIP_ADDUCTION_MACHINE.name),
-    getExerciseIdByName(_Exercise.STRETCHING.name)
-  ]));
+    getExerciseIdByName(ExerciseEnum.ELLIPTICAL_WARMUP.name),
+    getExerciseIdByName(ExerciseEnum.LEG_PRESS_MACHINE.name),
+    getExerciseIdByName(ExerciseEnum.LEG_EXTENSION_MACHINE.name),
+    getExerciseIdByName(ExerciseEnum.LEG_CURL_MACHINE.name),
+    getExerciseIdByName(ExerciseEnum.CALF_EXTENSION_MACHINE.name),
+    getExerciseIdByName(ExerciseEnum.STANDING_GLUTE_MACHINE.name),
+    getExerciseIdByName(ExerciseEnum.HIP_ABDUCTION_MACHINE.name),
+    getExerciseIdByName(ExerciseEnum.HIP_ADDUCTION_MACHINE.name),
+    getExerciseIdByName(ExerciseEnum.STRETCHING.name)
+  ]
+));
 
-// @TODO: better exercises here so you can do them all in one place
 fitness_data.routines.push(
   new Routine("Arms and Core", [
-    getExerciseIdByName(_Exercise.ELLIPTICAL_WARMUP.name),
-    getExerciseIdByName(_Exercise.SIDE_RAISES.name),
-    getExerciseIdByName(_Exercise.FRONT_RAISES.name),
-    getExerciseIdByName(_Exercise.SHOULDER_PRESS_MACHINE.name),
-    getExerciseIdByName(_Exercise.OVERHAND_CURLS.name),
-    getExerciseIdByName(_Exercise.CABLE_TRICEP_PULLDOWNS.name),
-    getExerciseIdByName(_Exercise.UNDERHAND_CURLS.name),
-    getExerciseIdByName(_Exercise.TRICEP_PRESS_MACHINE.name),
-    getExerciseIdByName(_Exercise.HAMMER_CURLS.name),
-    getExerciseIdByName(_Exercise.ABDOMINAL_CRUNCH_MACHINE.name),
-    getExerciseIdByName(_Exercise.OBLIQUE_SIDE_BEND.name),
-    getExerciseIdByName(_Exercise.STRETCHING.name)
-  ]));
+    getExerciseIdByName(ExerciseEnum.ELLIPTICAL_WARMUP.name),
+    getExerciseIdByName(ExerciseEnum.SIDE_RAISES.name),
+    getExerciseIdByName(ExerciseEnum.FRONT_RAISES.name),
+    getExerciseIdByName(ExerciseEnum.SHOULDER_PRESS_MACHINE.name),
+    getExerciseIdByName(ExerciseEnum.OVERHAND_CURLS.name),
+    getExerciseIdByName(ExerciseEnum.CABLE_TRICEP_PULLDOWNS.name),
+    getExerciseIdByName(ExerciseEnum.UNDERHAND_CURLS.name),
+    getExerciseIdByName(ExerciseEnum.SKULL_CRUSHERS.name),
+    getExerciseIdByName(ExerciseEnum.TRICEP_PRESS_MACHINE.name),
+    getExerciseIdByName(ExerciseEnum.HAMMER_CURLS.name),
+    getExerciseIdByName(ExerciseEnum.ABDOMINAL_CRUNCH_MACHINE.name),
+    getExerciseIdByName(ExerciseEnum.OBLIQUE_SIDE_BEND.name),
+    getExerciseIdByName(ExerciseEnum.STRETCHING.name)
+  ]
+));
 
 fitness_data.routines.push(
-  new Routine("General Cardio", [
-    getExerciseIdByName(_Exercise.ELLIPTICAL_INTERVAL.name),
-    getExerciseIdByName(_Exercise.STRETCHING.name)
-  ]));
+  new Routine("Cardio Day", [
+    getExerciseIdByName(ExerciseEnum.ELLIPTICAL_INTERVAL.name),
+    getExerciseIdByName(ExerciseEnum.STEPPER.name),
+    getExerciseIdByName(ExerciseEnum.STRETCHING.name)
+  ]
+));
 
 // OUTPUT FOR JSON #############################################################
 console.log( JSON.stringify(fitness_data) );
