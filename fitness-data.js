@@ -240,7 +240,7 @@ function getKilometers(unitPref, distance) {
 
 // CLASSES #####################################################################
 class Exercise {
-  constructor(name, category, desc, inputs, objectives, records) {
+  constructor(name, category, desc, inputs, objectives, exerciseRecords) {
     this.id = createId();
     this.createdAt = createDate();
     this.name = name;
@@ -248,7 +248,7 @@ class Exercise {
     this.desc = desc;
     this.inputs = inputs;
     this.objectives = objectives; // Objective []
-    this.records = records; // Record []
+    this.exerciseRecords = exerciseRecords; // Record []
   };
 };
 
@@ -269,7 +269,7 @@ class Objective {
   };
 };
 
-class Record {
+class ExerciseRecord {
   constructor(sets) {
     this.createdAt = createDate();
     this.sets = sets; // OneSet []
@@ -300,11 +300,20 @@ class DistanceUnits {
 };
 
 class Routine {
-  constructor(name, exerciseIds) {
+  constructor(name, exerciseIds, routineRecords=[]) {
     this.id = createId();
     this.createdAt = createDate();
     this.name = name;
     this.exerciseIds = exerciseIds;
+    this.routineRecords = routineRecords; // RoutineRecord []
+  };
+};
+
+class RoutineRecord {
+  constructor(finishedAt, weightMoved) {
+    this.createdAt = new Date();
+    this.finishedAt = finishedAt;
+    this.weightMoved = weightMoved;
   };
 };
 
@@ -326,7 +335,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.RESISTENCE, "8/20"),
     new Objective(_Objective.INCLINE, "0/20")
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(420, new DistanceUnits(_UnitPref.IMPERIAL, 0.5), null, null)
     ])
   ]));
@@ -342,7 +351,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.RESISTENCE, "8/20"),
     new Objective(_Objective.INCLINE, "0/20")
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(1440, new DistanceUnits(_UnitPref.IMPERIAL, 2), null, null)
     ])
   ]));
@@ -356,7 +365,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.NOTES, "Notes"),
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM),
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(540, null, null, null)
     ])
   ]));
@@ -372,7 +381,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 130), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 130), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 130), 10),
@@ -391,7 +400,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 75), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 75), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 75), 10),
@@ -410,7 +419,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 130), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 130), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 130), 10),
@@ -429,7 +438,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.SLOW),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10)
@@ -447,7 +456,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 42.5), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 42.5), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 42.5), 10)
@@ -465,7 +474,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 190), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 190), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 190), 10)
@@ -483,7 +492,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
@@ -502,7 +511,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 190), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 190), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 190), 10),
@@ -521,7 +530,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 120), 10),
@@ -540,7 +549,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, -25), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, -25), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, -25), 10)
@@ -558,7 +567,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 15), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 15), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 15), 10)
@@ -576,7 +585,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 30), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 30), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 30), 10)
@@ -594,7 +603,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 30), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 30), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 30), 10)
@@ -612,7 +621,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 10), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 10), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 10), 10)
@@ -630,7 +639,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 10), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 10), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 10), 10)
@@ -648,7 +657,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 60), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 60), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 60), 10)
@@ -666,7 +675,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 175), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 175), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 175), 10)
@@ -684,7 +693,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 90), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 90), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 90), 10)
@@ -702,7 +711,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 90), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 90), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 90), 10)
@@ -720,7 +729,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 175), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 175), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 175), 10)
@@ -738,7 +747,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 125), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 125), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 125), 10)
@@ -756,7 +765,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 200), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 200), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 200), 10)
@@ -774,7 +783,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 165), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 165), 10),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 165), 10)
@@ -792,7 +801,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 35), 25),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 35), 25),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 35), 25),
@@ -811,7 +820,7 @@ fitness_data.exercises.push(
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
-    new Record([
+    new ExerciseRecord([
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 45), 25),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 45), 25),
       new OneSet(null, null, new WeightUnits(_UnitPref.IMPERIAL, 45), 25),
