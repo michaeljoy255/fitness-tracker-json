@@ -164,7 +164,7 @@ const _Exercise = Object.freeze({
 
 const _Objective = Object.freeze({
   NOTES: "Notes",
-  BREAKS: "Breaks",
+  REST: "Rest",
   TEMPO: "Tempo",
   INTENSITY: "Intensity",
   RESISTENCE: "Resistence",
@@ -368,7 +368,7 @@ fitness_data.exercises.push(
     _Exercise.FLAT_BENCH_PRESS.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "2m"),
+    new Objective(_Objective.REST, "2m"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
@@ -387,7 +387,7 @@ fitness_data.exercises.push(
     _Exercise.INCLINE_BENCH_PRESS.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "2m"),
+    new Objective(_Objective.REST, "2m"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
@@ -406,7 +406,7 @@ fitness_data.exercises.push(
     _Exercise.DECLINE_BENCH_PRESS.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "2m"),
+    new Objective(_Objective.REST, "2m"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
@@ -425,7 +425,7 @@ fitness_data.exercises.push(
     _Exercise.FLY_MACHINE_CHEST.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "2m"),
+    new Objective(_Objective.REST, "2m"),
     new Objective(_Objective.TEMPO, _Tempo.SLOW),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
@@ -443,7 +443,7 @@ fitness_data.exercises.push(
     _Exercise.CABLE_TRICEP_PULLDOWNS.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "1m 30s"),
+    new Objective(_Objective.REST, "1m 30s"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
@@ -461,7 +461,7 @@ fitness_data.exercises.push(
     _Exercise.TRICEP_PRESS_MACHINE.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "1m 30s"),
+    new Objective(_Objective.REST, "1m 30s"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
@@ -479,7 +479,7 @@ fitness_data.exercises.push(
     _Exercise.BENT_OVER_ROWS.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "2m"),
+    new Objective(_Objective.REST, "2m"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
@@ -498,7 +498,7 @@ fitness_data.exercises.push(
     _Exercise.SHRUGS.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "2m"),
+    new Objective(_Objective.REST, "2m"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
@@ -517,7 +517,7 @@ fitness_data.exercises.push(
     _Exercise.STIFF_LEG_DEADLIFTS.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "2m"),
+    new Objective(_Objective.REST, "2m"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
@@ -536,7 +536,7 @@ fitness_data.exercises.push(
     _Exercise.ASSISTED_PULL_UPS.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "2m"),
+    new Objective(_Objective.REST, "2m"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
@@ -554,7 +554,7 @@ fitness_data.exercises.push(
     _Exercise.OVERHAND_CURLS.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "2m"),
+    new Objective(_Objective.REST, "2m"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
@@ -572,7 +572,7 @@ fitness_data.exercises.push(
     _Exercise.UNDERHAND_CURLS.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "2m"),
+    new Objective(_Objective.REST, "2m"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
@@ -590,7 +590,7 @@ fitness_data.exercises.push(
     _Exercise.HAMMER_CURLS.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "2m"),
+    new Objective(_Objective.REST, "2m"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
@@ -608,7 +608,7 @@ fitness_data.exercises.push(
     _Exercise.SIDE_RAISES.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "1m"),
+    new Objective(_Objective.REST, "1m"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
@@ -626,7 +626,7 @@ fitness_data.exercises.push(
     _Exercise.FRONT_RAISES.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "1m"),
+    new Objective(_Objective.REST, "1m"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
@@ -644,7 +644,7 @@ fitness_data.exercises.push(
     _Exercise.SHOULDER_PRESS_MACHINE.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "2m"),
+    new Objective(_Objective.REST, "2m"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
@@ -662,7 +662,7 @@ fitness_data.exercises.push(
     _Exercise.LEG_PRESS_MACHINE.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "1m"),
+    new Objective(_Objective.REST, "1m"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
@@ -680,7 +680,7 @@ fitness_data.exercises.push(
     _Exercise.LEG_EXTENSION_MACHINE.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "1m"),
+    new Objective(_Objective.REST, "1m"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
@@ -698,7 +698,7 @@ fitness_data.exercises.push(
     _Exercise.LEG_CURL_MACHINE.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "1m"),
+    new Objective(_Objective.REST, "1m"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
@@ -716,7 +716,7 @@ fitness_data.exercises.push(
     _Exercise.CALF_EXTENSION_MACHINE.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "1m"),
+    new Objective(_Objective.REST, "1m"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
@@ -734,7 +734,7 @@ fitness_data.exercises.push(
     _Exercise.STANDING_GLUTE_MACHINE.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "1m"),
+    new Objective(_Objective.REST, "1m"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
@@ -752,7 +752,7 @@ fitness_data.exercises.push(
     _Exercise.HIP_ABDUCTION_MACHINE.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "1m"),
+    new Objective(_Objective.REST, "1m"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
@@ -770,7 +770,7 @@ fitness_data.exercises.push(
     _Exercise.HIP_ADDUCTION_MACHINE.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "1m"),
+    new Objective(_Objective.REST, "1m"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
@@ -788,7 +788,7 @@ fitness_data.exercises.push(
     _Exercise.ABDOMINAL_CRUNCH_MACHINE.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "2m"),
+    new Objective(_Objective.REST, "2m"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.HIGH)
   ], [
@@ -807,7 +807,7 @@ fitness_data.exercises.push(
     _Exercise.OBLIQUE_SIDE_BEND.desc,
   new Inputs(true, false, false, true, true), [
     new Objective(_Objective.NOTES, "Notes"),
-    new Objective(_Objective.BREAKS, "1m"),
+    new Objective(_Objective.REST, "1m"),
     new Objective(_Objective.TEMPO, _Tempo.NORMAL),
     new Objective(_Objective.INTENSITY, _Intensity.MEDIUM)
   ], [
