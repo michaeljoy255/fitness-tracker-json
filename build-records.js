@@ -231,12 +231,7 @@ fitness_data.exercises.push(
       new ExerciseRecord({
         duration: 7,
         distance: 0.5,
-        sets: [
-          new OneSet({
-            weight: null,
-            reps: null
-          })
-        ]
+        sets: []
       })
     ]
   })
@@ -260,12 +255,7 @@ fitness_data.exercises.push(
       new ExerciseRecord({
         duration: 8,
         distance: null,
-        sets: [
-          new OneSet({
-            weight: null,
-            reps: null
-          })
-        ]
+        sets: []
       })
     ]
   })
