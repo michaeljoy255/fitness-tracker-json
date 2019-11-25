@@ -26,12 +26,22 @@ const CategoryType = {
 }
 
 const ObjectiveType = {
-  REST: "Rest", // hourglass_empty
-  TEMPO: "Tempo", // speed
-  INTENSITY: "Intensity", // whatshot
-  RESISTENCE: "Resistence", // fitness_center
-  INCLINE: "Incline", // signal_cellular_null
-  MAXIMUM: "Maximum" // priority_high
+  REST: "Rest",
+  TEMPO: "Tempo",
+  INTENSITY: "Intensity",
+  RESISTENCE: "Resistence",
+  INCLINE: "Incline",
+  MAXIMUM: "Maximum"
+}
+
+const Icon = {
+  NOTES: "assignment",
+  REST: "hourglass_empty",
+  TEMPO: "speed",
+  INTENSITY: "whatshot",
+  RESISTENCE: "fitness_center",
+  INCLINE: "signal_cellular_null",
+  MAXIMUM: "priority_high"
 }
 
 const IntensityType = {
@@ -129,7 +139,6 @@ function getKilometers(unitPref, distance) {
 function Exercise({
   name = null,
   category = null,
-  desc = null,
   inputs = null,
   objectives = [],
   exerciseRecords = []
@@ -137,7 +146,6 @@ function Exercise({
   this.id = uuid.v4();
   this.name = name;
   this.category = category;
-  this.desc = desc;
   this.inputs = inputs;
   this.objectives = objectives; // Objective []
   this.exerciseRecords = exerciseRecords; // Record []
@@ -157,42 +165,25 @@ function Inputs({
   this.hasReps = hasReps; // 1 input
 }
 
-function Objective({type = null, text = null}={}) {
+function Objective({type = null, icon = null, text = null}={}) {
   this.type = type;
+  this.icon = icon;
   this.text = text;
 }
 
-function ExerciseRecord({sets = []}={}) {
+function ExerciseRecord({duration = null, distance = null, sets = []}={}) {
   this.createdAt = new Date().toISOString();
+  this.duration = duration;
+  this.distance = distance;
   this.sets = sets; // OneSet []
 }
 
 function OneSet({
-  duration = null,
-  distance = null,
   weight = null,
   reps = null
 }={}) {
-  this.duration = duration;
-  this.distance = distance; // DistanceUnits
-  this.weight = weight; // WeightUnits
+  this.weight = weight;
   this.reps = reps;
-}
-
-function WeightUnits({
-  unitPref = UnitPrefType.IMPERIAL,
-  weight = 0
-}={}) {
-  this.pounds = getPounds(unitPref, weight);
-  this.kilograms = getKilograms(unitPref, weight);
-}
-
-function DistanceUnits({
-  unitPref = UnitPrefType.IMPERIAL,
-  distance = 0
-}={}) {
-  this.miles = getMiles(unitPref, distance);
-  this.kilometers = getKilometers(unitPref, distance);
 }
 
 function Routine({
@@ -224,7 +215,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.ELLIPTICAL_WARMUP, // Exercise Name -----
     category: CategoryType.CARDIO,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: true,
@@ -233,16 +223,16 @@ fitness_data.exercises.push(
       hasReps: false
     }),
     objectives: [
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.LOW}),
-      new Objective({type: ObjectiveType.RESISTENCE, text: "8/20"}),
-      new Objective({type: ObjectiveType.INCLINE, text: "0/20"})
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.LOW}),
+      new Objective({type: ObjectiveType.RESISTENCE, icon: Icon.RESISTENCE, text: "8/20"}),
+      new Objective({type: ObjectiveType.INCLINE, icon: Icon.INCLINE, text: "0/20"})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: 7,
+        distance: 0.5,
         sets: [
           new OneSet({
-            duration: 7,
-            distance: new DistanceUnits({distance: 0.5}),
             weight: null,
             reps: null
           })
@@ -256,7 +246,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.STRETCHING, // Exercise Name -----
     category: CategoryType.MISC,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: true,
@@ -265,14 +254,14 @@ fitness_data.exercises.push(
       hasReps: false
     }),
     objectives: [
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.LOW})
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.LOW})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: 8,
+        distance: null,
         sets: [
           new OneSet({
-            duration: 8,
-            distance: null,
             weight: null,
             reps: null
           })
@@ -286,7 +275,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.SMITH_FLAT_BENCH_PRESS, // Exercise Name -----
     category: CategoryType.CHEST,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -295,35 +283,29 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "2m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "2m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 130}),
+            weight: 130,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 130}),
+            weight: 130,
             reps: 7
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 130}),
+            weight: 130,
             reps: 7
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 130}),
+            weight: 130,
             reps: 6
           })
         ]
@@ -336,7 +318,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.SMITH_INCLINE_BENCH_PRESS, // Exercise Name -----
     category: CategoryType.CHEST,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -345,35 +326,29 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "2m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "2m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 75}),
+            weight: 75,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 75}),
+            weight: 75,
             reps: 8
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 75}),
+            weight: 75,
             reps: 8
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 75}),
+            weight: 75,
             reps: 8
           })
         ]
@@ -386,7 +361,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.SMITH_DECLINE_BENCH_PRESS, // Exercise Name -----
     category: CategoryType.CHEST,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -395,35 +369,29 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "2m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "2m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 125}),
+            weight: 125,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 125}),
+            weight: 125,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 127.5}),
+            weight: 127.5,
             reps: 9
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 130}),
+            weight: 130,
             reps: 7
           })
         ]
@@ -436,7 +404,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.DUMBBELL_FLAT_BENCH_PRESS, // Exercise Name -----
     category: CategoryType.CHEST,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -445,35 +412,29 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "2m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "2m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 45}),
+            weight: 45,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 45}),
+            weight: 45,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 45}),
+            weight: 45,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 45}),
+            weight: 45,
             reps: 10
           })
         ]
@@ -486,7 +447,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.FLY_MACHINE_CHEST, // Exercise Name -----
     category: CategoryType.CHEST,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -495,29 +455,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "2m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.SLOW}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "2m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.SLOW}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 105}),
+            weight: 105,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 105}),
+            weight: 105,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 105}),
+            weight: 105,
             reps: 10
           })
         ]
@@ -530,7 +486,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.LAYING_OVERHEAD_STRAIGHT_ARMS, // Exercise Name -----
     category: CategoryType.CHEST,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -539,29 +494,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "2m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.SLOW}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.HIGH})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "2m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.SLOW}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.HIGH})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 30}),
+            weight: 30,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 30}),
+            weight: 30,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 30}),
+            weight: 30,
             reps: 10
           })
         ]
@@ -574,7 +525,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.DUMBBELL_FRONT_SIDE_RAISES, // Exercise Name -----
     category: CategoryType.SHOULDERS,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -583,29 +533,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 10}),
+            weight: 10,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 10}),
+            weight: 10,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 10}),
+            weight: 10,
             reps: 10
           })
         ]
@@ -618,7 +564,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.SHOULDER_PRESS_MACHINE, // Exercise Name -----
     category: CategoryType.SHOULDERS,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -627,29 +572,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 60}),
+            weight: 60,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 60}),
+            weight: 60,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 60}),
+            weight: 60,
             reps: 10
           })
         ]
@@ -662,7 +603,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.CABLE_TRICEP_PULLDOWNS, // Exercise Name -----
     category: CategoryType.TRICEPS,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -671,29 +611,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 47.5}),
+            weight: 47.5,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 47.5}),
+            weight: 47.5,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 47.5}),
+            weight: 47.5,
             reps: 10
           })
         ]
@@ -706,7 +642,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.TRICEP_PRESS_MACHINE, // Exercise Name -----
     category: CategoryType.TRICEPS,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -715,29 +650,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 170}),
+            weight: 170,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 170}),
+            weight: 170,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 170}),
+            weight: 170,
             reps: 10
           })
         ]
@@ -750,7 +681,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.SKULL_CRUSHERS, // Exercise Name -----
     category: CategoryType.TRICEPS,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -759,29 +689,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 40}),
+            weight: 40,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 40}),
+            weight: 40,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 40}),
+            weight: 40,
             reps: 10
           })
         ]
@@ -794,7 +720,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.STANDING_TRICEP_OVERHEAD_EXT, // Exercise Name -----
     category: CategoryType.TRICEPS,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -803,29 +728,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 35}),
+            weight: 35,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 35}),
+            weight: 35,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 35}),
+            weight: 35,
             reps: 10
           })
         ]
@@ -838,7 +759,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.SMITH_BENT_OVER_ROWS, // Exercise Name -----
     category: CategoryType.BACK,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -847,35 +767,29 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "2m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "2m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 125}),
+            weight: 125,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 125}),
+            weight: 125,
             reps: 9
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 125}),
+            weight: 125,
             reps: 9
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 125}),
+            weight: 125,
             reps: 8
           })
         ]
@@ -888,7 +802,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.SMITH_STIFF_LEG_DEADLIFTS, // Exercise Name -----
     category: CategoryType.BACK,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -897,35 +810,29 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "2m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "2m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 115}),
+            weight: 115,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 115}),
+            weight: 115,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 115}),
+            weight: 115,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 115}),
+            weight: 115,
             reps: 10
           })
         ]
@@ -938,7 +845,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.SEATED_CABLE_PULLDOWNS, // Exercise Name -----
     category: CategoryType.BACK,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -947,29 +853,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "2m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "2m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 85}),
+            weight: 85,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 85}),
+            weight: 85,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 85}),
+            weight: 85,
             reps: 10
           })
         ]
@@ -982,7 +884,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.SEATED_CABLE_ROWS, // Exercise Name -----
     category: CategoryType.BACK,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -991,29 +892,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "2m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "2m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 85}),
+            weight: 85,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 85}),
+            weight: 85,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 85}),
+            weight: 85,
             reps: 10
           })
         ]
@@ -1026,7 +923,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.STANDING_T_ROWS, // Exercise Name -----
     category: CategoryType.BACK,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -1035,29 +931,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "2m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "2m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 50}),
+            weight: 50,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 50}),
+            weight: 50,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 50}),
+            weight: 50,
             reps: 10
           })
         ]
@@ -1070,7 +962,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.ASSISTED_PULL_UPS, // Exercise Name -----
     category: CategoryType.BACK,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -1079,29 +970,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "2m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "2m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: -25}),
+            weight: -25,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: -25}),
+            weight: -25,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: -25}),
+            weight: -25,
             reps: 10
           })
         ]
@@ -1114,7 +1001,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.DUMBBELL_HAMMER_CURLS, // Exercise Name -----
     category: CategoryType.BICEPS,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -1123,29 +1009,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 25}),
+            weight: 25,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 25}),
+            weight: 25,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 25}),
+            weight: 25,
             reps: 10
           })
         ]
@@ -1158,7 +1040,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.CABLE_UNDERHAND_CURLS, // Exercise Name -----
     category: CategoryType.BICEPS,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -1167,29 +1048,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 30}),
+            weight: 30,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 30}),
+            weight: 30,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 30}),
+            weight: 30,
             reps: 10
           })
         ]
@@ -1202,7 +1079,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.DUMBBELL_OVERHAND_CURLS, // Exercise Name -----
     category: CategoryType.BICEPS,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -1211,29 +1087,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 20}),
+            weight: 20,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 20}),
+            weight: 20,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 20}),
+            weight: 20,
             reps: 10
           })
         ]
@@ -1246,7 +1118,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.DUMBBELL_UNDERHAND_CURLS, // Exercise Name -----
     category: CategoryType.BICEPS,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -1255,29 +1126,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 25}),
+            weight: 25,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 25}),
+            weight: 25,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 25}),
+            weight: 25,
             reps: 10
           })
         ]
@@ -1290,7 +1157,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.LEG_PRESS_MACHINE, // Exercise Name -----
     category: CategoryType.LEGS,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -1299,29 +1165,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 180}),
+            weight: 180,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 180}),
+            weight: 180,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 180}),
+            weight: 180,
             reps: 10
           })
         ]
@@ -1334,7 +1196,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.LEG_EXT_MACHINE, // Exercise Name -----
     category: CategoryType.LEGS,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -1343,29 +1204,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 95}),
+            weight: 95,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 95}),
+            weight: 95,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 95}),
+            weight: 95,
             reps: 10
           })
         ]
@@ -1378,7 +1235,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.LEG_CURL_MACHINE, // Exercise Name -----
     category: CategoryType.LEGS,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -1387,29 +1243,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 90}),
+            weight: 90,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 90}),
+            weight: 90,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 90}),
+            weight: 90,
             reps: 10
           })
         ]
@@ -1422,7 +1274,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.CALF_EXT_MACHINE, // Exercise Name -----
     category: CategoryType.LEGS,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -1431,29 +1282,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 200}),
+            weight: 200,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 200}),
+            weight: 200,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 200}),
+            weight: 200,
             reps: 10
           })
         ]
@@ -1466,7 +1313,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.STANDING_GLUTE_MACHINE, // Exercise Name -----
     category: CategoryType.LEGS,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -1475,29 +1321,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 130}),
+            weight: 130,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 130}),
+            weight: 130,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 130}),
+            weight: 130,
             reps: 10
           })
         ]
@@ -1510,7 +1352,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.HIP_ABDUCTION_MACHINE, // Exercise Name -----
     category: CategoryType.LEGS,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -1519,29 +1360,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 205}),
+            weight: 205,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 210}),
+            weight: 210,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 215}),
+            weight: 215,
             reps: 10
           })
         ]
@@ -1554,7 +1391,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.HIP_ADDUCTION_MACHINE, // Exercise Name -----
     category: CategoryType.LEGS,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -1563,29 +1399,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 170}),
+            weight: 170,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 175}),
+            weight: 175,
             reps: 10
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 180}),
+            weight: 180,
             reps: 10
           })
         ]
@@ -1598,7 +1430,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.ABDOMINAL_CRUNCH_MACHINE, // Exercise Name -----
     category: CategoryType.CORE,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -1607,29 +1438,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "2m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "2m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 50}),
+            weight: 50,
             reps: 15
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 50}),
+            weight: 50,
             reps: 15
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 50}),
+            weight: 50,
             reps: 15
           })
         ]
@@ -1642,7 +1469,6 @@ fitness_data.exercises.push(
   new Exercise({
     name: ExerciseType.OBLIQUE_SIDE_BEND, // Exercise Name -----
     category: CategoryType.CORE,
-    desc: null,
     inputs: new Inputs({
       hasNotes: true,
       hasDuration: false,
@@ -1651,29 +1477,25 @@ fitness_data.exercises.push(
       hasReps: true
     }),
     objectives: [
-      new Objective({type: ObjectiveType.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
+        duration: null,
+        distance: null,
         sets: [
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 45}),
+            weight: 45,
             reps: 25
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 45}),
+            weight: 45,
             reps: 25
           }),
           new OneSet({
-            duration: null,
-            distance: null,
-            weight: new WeightUnits({weight: 45}),
+            weight: 45,
             reps: 25
           })
         ]

@@ -1,10 +1,9 @@
 {
   "exercises": [
     {
-      "id": "4c4bcc73-0ee5-4f7f-8ed4-f5588daf0a46",
+      "id": "94e7df7d-0ab0-421f-82c7-d8238ffee7d2",
       "name": "Elliptical, Warmup",
       "category": "Cardio",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": true,
@@ -13,29 +12,23 @@
         "hasReps": false
       },
       "objectives": [
-        { "type": "Intensity", "text": "Low" },
-        { "type": "Resistence", "text": "8/20" },
-        { "type": "Incline", "text": "0/20" }
+        { "type": "Intensity", "icon": "whatshot", "text": "Low" },
+        { "type": "Resistence", "icon": "fitness_center", "text": "8/20" },
+        { "type": "Incline", "icon": "signal_cellular_null", "text": "0/20" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.252Z",
-          "sets": [
-            {
-              "duration": 7,
-              "distance": { "miles": 0.5, "kilometers": 0.8 },
-              "weight": null,
-              "reps": null
-            }
-          ]
+          "createdAt": "2019-11-25T02:25:53.188Z",
+          "duration": 7,
+          "distance": 0.5,
+          "sets": [{ "weight": null, "reps": null }]
         }
       ]
     },
     {
-      "id": "edec539b-8b05-4b3f-aac9-fbc306083265",
+      "id": "08e3bc72-b2a4-43dc-a89e-990016cdafcc",
       "name": "Stretching",
       "category": "Miscellaneous",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": true,
@@ -43,21 +36,22 @@
         "hasWeight": false,
         "hasReps": false
       },
-      "objectives": [{ "type": "Intensity", "text": "Low" }],
+      "objectives": [
+        { "type": "Intensity", "icon": "whatshot", "text": "Low" }
+      ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.252Z",
-          "sets": [
-            { "duration": 8, "distance": null, "weight": null, "reps": null }
-          ]
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": 8,
+          "distance": null,
+          "sets": [{ "weight": null, "reps": null }]
         }
       ]
     },
     {
-      "id": "3873ee81-7b47-47c3-98cc-effaac06f796",
+      "id": "bb677062-f908-440b-b899-39e2cd084bb2",
       "name": "Smith Flat Bench Press",
       "category": "Chest",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -66,47 +60,28 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "2m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "2m" },
+        { "type": "Tempo", "icon": "speed", "text": "Normal" },
+        { "type": "Intensity", "icon": "whatshot", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.252Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 130, "kilograms": 58.97 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 130, "kilograms": 58.97 },
-              "reps": 7
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 130, "kilograms": 58.97 },
-              "reps": 7
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 130, "kilograms": 58.97 },
-              "reps": 6
-            }
+            { "weight": 130, "reps": 10 },
+            { "weight": 130, "reps": 7 },
+            { "weight": 130, "reps": 7 },
+            { "weight": 130, "reps": 6 }
           ]
         }
       ]
     },
     {
-      "id": "0a8917b1-4ac8-4bd5-ae4f-d15d39f02a21",
+      "id": "5d9e60af-ea65-4f4d-87d7-5f590f7fc150",
       "name": "Smith Incline Bench Press",
       "category": "Chest",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -115,47 +90,28 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "2m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "2m" },
+        { "type": "Tempo", "icon": "speed", "text": "Normal" },
+        { "type": "Intensity", "icon": "whatshot", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.252Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 75, "kilograms": 34.02 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 75, "kilograms": 34.02 },
-              "reps": 8
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 75, "kilograms": 34.02 },
-              "reps": 8
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 75, "kilograms": 34.02 },
-              "reps": 8
-            }
+            { "weight": 75, "reps": 10 },
+            { "weight": 75, "reps": 8 },
+            { "weight": 75, "reps": 8 },
+            { "weight": 75, "reps": 8 }
           ]
         }
       ]
     },
     {
-      "id": "99e0f672-5f52-4cd7-8aae-0b02b583e93e",
+      "id": "f3f77d11-dc89-4629-b01a-30d5e38a9ab2",
       "name": "Smith Decline Bench Press",
       "category": "Chest",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -164,47 +120,28 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "2m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "2m" },
+        { "type": "Tempo", "icon": "speed", "text": "Normal" },
+        { "type": "Intensity", "icon": "whatshot", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.252Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 125, "kilograms": 56.7 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 125, "kilograms": 56.7 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 127.5, "kilograms": 57.83 },
-              "reps": 9
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 130, "kilograms": 58.97 },
-              "reps": 7
-            }
+            { "weight": 125, "reps": 10 },
+            { "weight": 125, "reps": 10 },
+            { "weight": 127.5, "reps": 9 },
+            { "weight": 130, "reps": 7 }
           ]
         }
       ]
     },
     {
-      "id": "ceec0b0e-4b41-4753-a194-53a79b4ccbb3",
+      "id": "ea0334ed-e89c-4fbe-a0f9-bd7deec79314",
       "name": "Dumbbell Flat Bench Press",
       "category": "Chest",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -213,47 +150,28 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "2m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "2m" },
+        { "type": "Tempo", "icon": "speed", "text": "Normal" },
+        { "type": "Intensity", "icon": "whatshot", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.252Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 45, "kilograms": 20.41 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 45, "kilograms": 20.41 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 45, "kilograms": 20.41 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 45, "kilograms": 20.41 },
-              "reps": 10
-            }
+            { "weight": 45, "reps": 10 },
+            { "weight": 45, "reps": 10 },
+            { "weight": 45, "reps": 10 },
+            { "weight": 45, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "a917e930-4198-472d-b2f6-2e7870ee7c1a",
+      "id": "30f23e6f-1b7e-47ae-86e7-c883cd7e69f1",
       "name": "Fly Machine (Chest)",
       "category": "Chest",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -262,41 +180,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "2m" },
-        { "type": "Tempo", "text": "Slow" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "2m" },
+        { "type": "Tempo", "icon": "speed", "text": "Slow" },
+        { "type": "Intensity", "icon": "whatshot", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.252Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 105, "kilograms": 47.63 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 105, "kilograms": 47.63 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 105, "kilograms": 47.63 },
-              "reps": 10
-            }
+            { "weight": 105, "reps": 10 },
+            { "weight": 105, "reps": 10 },
+            { "weight": 105, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "649e5edc-5ebb-4753-9101-6457aa584218",
+      "id": "ebaa3514-bcd1-495f-a08a-0b7c94f6c1ef",
       "name": "Laying Overhead Straight Arms",
       "category": "Chest",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -305,41 +209,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "2m" },
-        { "type": "Tempo", "text": "Slow" },
-        { "type": "Intensity", "text": "High" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "2m" },
+        { "type": "Tempo", "icon": "speed", "text": "Slow" },
+        { "type": "Intensity", "icon": "whatshot", "text": "High" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.252Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 30, "kilograms": 13.61 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 30, "kilograms": 13.61 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 30, "kilograms": 13.61 },
-              "reps": 10
-            }
+            { "weight": 30, "reps": 10 },
+            { "weight": 30, "reps": 10 },
+            { "weight": 30, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "816ccf84-77be-498a-bc93-707f633f64db",
+      "id": "2c357bc7-8156-4fb5-bfff-9446bd9da36e",
       "name": "Dumbbell Front & Side Raises",
       "category": "Shoudlers",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -348,41 +238,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "1m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "1m" },
+        { "type": "Tempo", "icon": "speed", "text": "Normal" },
+        { "type": "Intensity", "icon": "whatshot", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.252Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 10, "kilograms": 4.54 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 10, "kilograms": 4.54 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 10, "kilograms": 4.54 },
-              "reps": 10
-            }
+            { "weight": 10, "reps": 10 },
+            { "weight": 10, "reps": 10 },
+            { "weight": 10, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "3e43fff6-4432-48df-9d85-0307180579ed",
+      "id": "06220870-0565-438c-b7f5-5d6079c1e199",
       "name": "Shoulder Press Machine",
       "category": "Shoudlers",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -391,41 +267,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "1m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "1m" },
+        { "type": "Tempo", "icon": "speed", "text": "Normal" },
+        { "type": "Intensity", "icon": "whatshot", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.252Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 60, "kilograms": 27.22 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 60, "kilograms": 27.22 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 60, "kilograms": 27.22 },
-              "reps": 10
-            }
+            { "weight": 60, "reps": 10 },
+            { "weight": 60, "reps": 10 },
+            { "weight": 60, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "8798a443-1d3e-437d-baa1-374dfd7d7638",
+      "id": "4468de60-4933-45d3-af7f-c2b052ce08dd",
       "name": "Cable Tricep Pulldowns",
       "category": "Triceps",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -434,41 +296,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "1m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "1m" },
+        { "type": "Tempo", "icon": "speed", "text": "Normal" },
+        { "type": "Intensity", "icon": "whatshot", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.252Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 47.5, "kilograms": 21.55 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 47.5, "kilograms": 21.55 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 47.5, "kilograms": 21.55 },
-              "reps": 10
-            }
+            { "weight": 47.5, "reps": 10 },
+            { "weight": 47.5, "reps": 10 },
+            { "weight": 47.5, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "35f8305e-b8f4-4e85-9263-bfb4c6502ee1",
+      "id": "219e4632-d11e-4a92-91a7-ec61d596f8f5",
       "name": "Tricep Press Machine",
       "category": "Triceps",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -477,41 +325,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "1m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "1m" },
+        { "type": "Tempo", "icon": "speed", "text": "Normal" },
+        { "type": "Intensity", "icon": "whatshot", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.252Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 170, "kilograms": 77.11 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 170, "kilograms": 77.11 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 170, "kilograms": 77.11 },
-              "reps": 10
-            }
+            { "weight": 170, "reps": 10 },
+            { "weight": 170, "reps": 10 },
+            { "weight": 170, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "d03f6c18-7cd1-48bb-8ae7-768c2c490ea4",
+      "id": "91c7631c-1141-44ed-a169-03f273e33d95",
       "name": "Skull Crushers",
       "category": "Triceps",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -520,41 +354,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "1m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "1m" },
+        { "type": "Tempo", "icon": "speed", "text": "Normal" },
+        { "type": "Intensity", "icon": "whatshot", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.253Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 40, "kilograms": 18.14 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 40, "kilograms": 18.14 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 40, "kilograms": 18.14 },
-              "reps": 10
-            }
+            { "weight": 40, "reps": 10 },
+            { "weight": 40, "reps": 10 },
+            { "weight": 40, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "a8440159-afa7-4b7f-a807-3c474be404ed",
+      "id": "7ebce743-1c20-437a-bc25-888fd9eab39c",
       "name": "Standing Tricep Overhead Extension",
       "category": "Triceps",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -563,41 +383,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "1m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "1m" },
+        { "type": "Tempo", "icon": "speed", "text": "Normal" },
+        { "type": "Intensity", "icon": "whatshot", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.253Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 35, "kilograms": 15.88 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 35, "kilograms": 15.88 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 35, "kilograms": 15.88 },
-              "reps": 10
-            }
+            { "weight": 35, "reps": 10 },
+            { "weight": 35, "reps": 10 },
+            { "weight": 35, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "90a33b96-087c-4e13-9057-abb4550527b6",
+      "id": "fb24157d-bb98-4887-b5de-737d07ccea7c",
       "name": "Smith Bent Over Rows",
       "category": "Back",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -606,47 +412,28 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "2m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "2m" },
+        { "type": "Tempo", "icon": "speed", "text": "Normal" },
+        { "type": "Intensity", "icon": "whatshot", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.253Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 125, "kilograms": 56.7 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 125, "kilograms": 56.7 },
-              "reps": 9
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 125, "kilograms": 56.7 },
-              "reps": 9
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 125, "kilograms": 56.7 },
-              "reps": 8
-            }
+            { "weight": 125, "reps": 10 },
+            { "weight": 125, "reps": 9 },
+            { "weight": 125, "reps": 9 },
+            { "weight": 125, "reps": 8 }
           ]
         }
       ]
     },
     {
-      "id": "0dddea6b-1cec-449a-91dd-5010135a0463",
+      "id": "a4c71a70-6529-4aa1-adc6-9d17c1b85f27",
       "name": "Smith Stiff Leg Deadlift",
       "category": "Back",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -655,47 +442,28 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "2m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "2m" },
+        { "type": "Tempo", "icon": "hourglass_empty", "text": "Normal" },
+        { "type": "Intensity", "icon": "hourglass_empty", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.253Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 115, "kilograms": 52.16 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 115, "kilograms": 52.16 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 115, "kilograms": 52.16 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 115, "kilograms": 52.16 },
-              "reps": 10
-            }
+            { "weight": 115, "reps": 10 },
+            { "weight": 115, "reps": 10 },
+            { "weight": 115, "reps": 10 },
+            { "weight": 115, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "aa528fe3-66a7-4fc9-bec5-147d095ad4c0",
+      "id": "69e279ee-477d-4db2-b95b-cfce76634ffb",
       "name": "Seated Cable Pulldowns",
       "category": "Back",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -704,41 +472,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "2m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "2m" },
+        { "type": "Tempo", "icon": "hourglass_empty", "text": "Normal" },
+        { "type": "Intensity", "icon": "hourglass_empty", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.253Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 85, "kilograms": 38.56 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 85, "kilograms": 38.56 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 85, "kilograms": 38.56 },
-              "reps": 10
-            }
+            { "weight": 85, "reps": 10 },
+            { "weight": 85, "reps": 10 },
+            { "weight": 85, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "5e8bdba2-cf7b-49fd-97ee-56761d5dd4bf",
+      "id": "1a87d21e-4354-4190-8cab-752a9e87479b",
       "name": "Seated Cable Rows",
       "category": "Back",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -747,41 +501,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "2m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "2m" },
+        { "type": "Tempo", "icon": "hourglass_empty", "text": "Normal" },
+        { "type": "Intensity", "icon": "hourglass_empty", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.253Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 85, "kilograms": 38.56 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 85, "kilograms": 38.56 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 85, "kilograms": 38.56 },
-              "reps": 10
-            }
+            { "weight": 85, "reps": 10 },
+            { "weight": 85, "reps": 10 },
+            { "weight": 85, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "132d1ff0-d0a8-446a-ad7f-a877475c4b01",
+      "id": "f93cbb5b-37d9-44f2-976a-b6c8ea8885fb",
       "name": "Standing T-Rows",
       "category": "Back",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -790,41 +530,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "2m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "2m" },
+        { "type": "Tempo", "icon": "hourglass_empty", "text": "Normal" },
+        { "type": "Intensity", "icon": "hourglass_empty", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.253Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 50, "kilograms": 22.68 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 50, "kilograms": 22.68 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 50, "kilograms": 22.68 },
-              "reps": 10
-            }
+            { "weight": 50, "reps": 10 },
+            { "weight": 50, "reps": 10 },
+            { "weight": 50, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "78b7c9c6-9d64-4bbd-8d72-80b02c6cd60e",
+      "id": "9f661faf-97f6-4e34-8142-8494714f8e3d",
       "name": "Assisted Pull-ups",
       "category": "Back",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -833,41 +559,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "2m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "2m" },
+        { "type": "Tempo", "icon": "hourglass_empty", "text": "Normal" },
+        { "type": "Intensity", "icon": "hourglass_empty", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.253Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": -25, "kilograms": -11.34 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": -25, "kilograms": -11.34 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": -25, "kilograms": -11.34 },
-              "reps": 10
-            }
+            { "weight": -25, "reps": 10 },
+            { "weight": -25, "reps": 10 },
+            { "weight": -25, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "7f8e16f1-8502-47a9-b89f-4653500d1433",
+      "id": "1cdffaae-095c-41ed-9eed-97fa7b193630",
       "name": "Dumbbell Hammer Curls",
       "category": "Biceps",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -876,41 +588,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "1m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "1m" },
+        { "type": "Tempo", "icon": "hourglass_empty", "text": "Normal" },
+        { "type": "Intensity", "icon": "hourglass_empty", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.253Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 25, "kilograms": 11.34 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 25, "kilograms": 11.34 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 25, "kilograms": 11.34 },
-              "reps": 10
-            }
+            { "weight": 25, "reps": 10 },
+            { "weight": 25, "reps": 10 },
+            { "weight": 25, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "7086d11f-291a-45ab-ba76-c72375afd0ee",
+      "id": "aa312385-a6e8-49e4-b56b-66465a9072be",
       "name": "Cable Underhand Curls",
       "category": "Biceps",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -919,41 +617,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "1m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "1m" },
+        { "type": "Tempo", "icon": "hourglass_empty", "text": "Normal" },
+        { "type": "Intensity", "icon": "hourglass_empty", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.253Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 30, "kilograms": 13.61 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 30, "kilograms": 13.61 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 30, "kilograms": 13.61 },
-              "reps": 10
-            }
+            { "weight": 30, "reps": 10 },
+            { "weight": 30, "reps": 10 },
+            { "weight": 30, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "e4a9203a-2f05-4958-92f6-6c48fc90151b",
+      "id": "054c65c9-ae3b-4044-a296-dce8edc8e66d",
       "name": "Dumbbell Overhand Curls",
       "category": "Biceps",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -962,41 +646,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "1m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "1m" },
+        { "type": "Tempo", "icon": "hourglass_empty", "text": "Normal" },
+        { "type": "Intensity", "icon": "hourglass_empty", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.253Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 20, "kilograms": 9.07 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 20, "kilograms": 9.07 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 20, "kilograms": 9.07 },
-              "reps": 10
-            }
+            { "weight": 20, "reps": 10 },
+            { "weight": 20, "reps": 10 },
+            { "weight": 20, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "cc71ccaf-bc10-4e6d-9250-fe11601a243d",
+      "id": "6fdce757-4d99-41e1-8f74-dc018f392799",
       "name": "Dumbbell Underhand Curls",
       "category": "Biceps",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -1005,41 +675,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "1m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "1m" },
+        { "type": "Tempo", "icon": "hourglass_empty", "text": "Normal" },
+        { "type": "Intensity", "icon": "hourglass_empty", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.253Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 25, "kilograms": 11.34 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 25, "kilograms": 11.34 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 25, "kilograms": 11.34 },
-              "reps": 10
-            }
+            { "weight": 25, "reps": 10 },
+            { "weight": 25, "reps": 10 },
+            { "weight": 25, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "496d00ed-e7a0-41f1-9c33-2b2408bb4db3",
+      "id": "b713c71b-1225-42c4-b1dc-7ae8e2409004",
       "name": "Leg Press Machine",
       "category": "Legs",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -1048,41 +704,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "1m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "1m" },
+        { "type": "Tempo", "icon": "hourglass_empty", "text": "Normal" },
+        { "type": "Intensity", "icon": "hourglass_empty", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.253Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 180, "kilograms": 81.65 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 180, "kilograms": 81.65 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 180, "kilograms": 81.65 },
-              "reps": 10
-            }
+            { "weight": 180, "reps": 10 },
+            { "weight": 180, "reps": 10 },
+            { "weight": 180, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "aad319b4-49fd-4659-8f87-46f9a5c550a2",
+      "id": "3cee1f14-4e96-431a-a46f-6700857fd157",
       "name": "Leg Extension Machine",
       "category": "Legs",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -1091,41 +733,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "1m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "1m" },
+        { "type": "Tempo", "icon": "hourglass_empty", "text": "Normal" },
+        { "type": "Intensity", "icon": "hourglass_empty", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.253Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 95, "kilograms": 43.09 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 95, "kilograms": 43.09 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 95, "kilograms": 43.09 },
-              "reps": 10
-            }
+            { "weight": 95, "reps": 10 },
+            { "weight": 95, "reps": 10 },
+            { "weight": 95, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "59fb1f0b-14eb-49f8-883b-25763f845c3b",
+      "id": "0a9600b6-0af9-428a-a431-5e124b91cc64",
       "name": "Leg Curl Machine",
       "category": "Legs",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -1134,41 +762,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "1m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "1m" },
+        { "type": "Tempo", "icon": "hourglass_empty", "text": "Normal" },
+        { "type": "Intensity", "icon": "hourglass_empty", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.253Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 90, "kilograms": 40.82 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 90, "kilograms": 40.82 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 90, "kilograms": 40.82 },
-              "reps": 10
-            }
+            { "weight": 90, "reps": 10 },
+            { "weight": 90, "reps": 10 },
+            { "weight": 90, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "a35938b0-e988-46c4-ae33-159709bd2287",
+      "id": "440e69e4-838a-4267-9a51-c53cff28b3da",
       "name": "Calf Extension Machine",
       "category": "Legs",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -1177,41 +791,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "1m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "1m" },
+        { "type": "Tempo", "icon": "hourglass_empty", "text": "Normal" },
+        { "type": "Intensity", "icon": "hourglass_empty", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.253Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 200, "kilograms": 90.72 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 200, "kilograms": 90.72 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 200, "kilograms": 90.72 },
-              "reps": 10
-            }
+            { "weight": 200, "reps": 10 },
+            { "weight": 200, "reps": 10 },
+            { "weight": 200, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "ef46fa40-83e7-4f26-bef7-115cfb8abad3",
+      "id": "5533395e-2b04-4e12-9d80-7f27cd4c90a1",
       "name": "Standing Glute Machine",
       "category": "Legs",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -1220,41 +820,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "1m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "1m" },
+        { "type": "Tempo", "icon": "hourglass_empty", "text": "Normal" },
+        { "type": "Intensity", "icon": "hourglass_empty", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.253Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 130, "kilograms": 58.97 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 130, "kilograms": 58.97 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 130, "kilograms": 58.97 },
-              "reps": 10
-            }
+            { "weight": 130, "reps": 10 },
+            { "weight": 130, "reps": 10 },
+            { "weight": 130, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "10d94859-efd1-4866-9ae9-100b3e0f2b9c",
+      "id": "4dae44b9-a44a-43b8-b6d2-cffd1cc10ac2",
       "name": "Hip Abduction (Out) Machine",
       "category": "Legs",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -1263,41 +849,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "1m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "1m" },
+        { "type": "Tempo", "icon": "hourglass_empty", "text": "Normal" },
+        { "type": "Intensity", "icon": "hourglass_empty", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.253Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 205, "kilograms": 92.99 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 210, "kilograms": 95.25 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 215, "kilograms": 97.52 },
-              "reps": 10
-            }
+            { "weight": 205, "reps": 10 },
+            { "weight": 210, "reps": 10 },
+            { "weight": 215, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "a65f6be0-c16b-44bf-b705-72a76bbc921f",
+      "id": "6920fbe7-7fba-4103-8d54-f8e5587e1e3a",
       "name": "Hip Adduction (in) Machine",
       "category": "Legs",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -1306,41 +878,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "1m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "1m" },
+        { "type": "Tempo", "icon": "hourglass_empty", "text": "Normal" },
+        { "type": "Intensity", "icon": "hourglass_empty", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.253Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 170, "kilograms": 77.11 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 175, "kilograms": 79.38 },
-              "reps": 10
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 180, "kilograms": 81.65 },
-              "reps": 10
-            }
+            { "weight": 170, "reps": 10 },
+            { "weight": 175, "reps": 10 },
+            { "weight": 180, "reps": 10 }
           ]
         }
       ]
     },
     {
-      "id": "1ef9d6cf-745b-408d-b66c-ad1026adacdf",
+      "id": "4eaa1bcb-7891-4b55-863a-2e49f14fee27",
       "name": "Abdominal Crunch Machine",
       "category": "Core",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -1349,41 +907,27 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "2m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "2m" },
+        { "type": "Tempo", "icon": "hourglass_empty", "text": "Normal" },
+        { "type": "Intensity", "icon": "hourglass_empty", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.253Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 50, "kilograms": 22.68 },
-              "reps": 15
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 50, "kilograms": 22.68 },
-              "reps": 15
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 50, "kilograms": 22.68 },
-              "reps": 15
-            }
+            { "weight": 50, "reps": 15 },
+            { "weight": 50, "reps": 15 },
+            { "weight": 50, "reps": 15 }
           ]
         }
       ]
     },
     {
-      "id": "3232dd84-7139-4d3b-b913-58dda3cc4b6b",
+      "id": "a83133df-0b9e-46b8-bac3-8992df030b4a",
       "name": "Oblique Side Bends",
       "category": "Core",
-      "desc": null,
       "inputs": {
         "hasNotes": true,
         "hasDuration": false,
@@ -1392,32 +936,19 @@
         "hasReps": true
       },
       "objectives": [
-        { "type": "Rest", "text": "1m" },
-        { "type": "Tempo", "text": "Normal" },
-        { "type": "Intensity", "text": "Medium" }
+        { "type": "Rest", "icon": "hourglass_empty", "text": "1m" },
+        { "type": "Tempo", "icon": "hourglass_empty", "text": "Normal" },
+        { "type": "Intensity", "icon": "hourglass_empty", "text": "Medium" }
       ],
       "exerciseRecords": [
         {
-          "createdAt": "2019-11-23T20:02:32.253Z",
+          "createdAt": "2019-11-25T02:25:53.189Z",
+          "duration": null,
+          "distance": null,
           "sets": [
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 45, "kilograms": 20.41 },
-              "reps": 25
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 45, "kilograms": 20.41 },
-              "reps": 25
-            },
-            {
-              "duration": null,
-              "distance": null,
-              "weight": { "pounds": 45, "kilograms": 20.41 },
-              "reps": 25
-            }
+            { "weight": 45, "reps": 25 },
+            { "weight": 45, "reps": 25 },
+            { "weight": 45, "reps": 25 }
           ]
         }
       ]
@@ -1425,78 +956,78 @@
   ],
   "routines": [
     {
-      "id": "880304b6-e77b-45f4-b705-b0e7fc238ad7",
+      "id": "90c1706c-c562-4bba-9bba-54bca275e780",
       "name": "Chest, Shoulders, Triceps #1",
       "exerciseIds": [
-        "4c4bcc73-0ee5-4f7f-8ed4-f5588daf0a46",
-        "3873ee81-7b47-47c3-98cc-effaac06f796",
-        "0a8917b1-4ac8-4bd5-ae4f-d15d39f02a21",
-        "a917e930-4198-472d-b2f6-2e7870ee7c1a",
-        "816ccf84-77be-498a-bc93-707f633f64db",
-        "8798a443-1d3e-437d-baa1-374dfd7d7638",
-        "35f8305e-b8f4-4e85-9263-bfb4c6502ee1",
-        "edec539b-8b05-4b3f-aac9-fbc306083265"
+        "94e7df7d-0ab0-421f-82c7-d8238ffee7d2",
+        "bb677062-f908-440b-b899-39e2cd084bb2",
+        "5d9e60af-ea65-4f4d-87d7-5f590f7fc150",
+        "30f23e6f-1b7e-47ae-86e7-c883cd7e69f1",
+        "2c357bc7-8156-4fb5-bfff-9446bd9da36e",
+        "4468de60-4933-45d3-af7f-c2b052ce08dd",
+        "219e4632-d11e-4a92-91a7-ec61d596f8f5",
+        "08e3bc72-b2a4-43dc-a89e-990016cdafcc"
       ],
       "routineRecords": []
     },
     {
-      "id": "bdd7a7f0-0c94-4969-8052-9c5bd415492e",
+      "id": "db2d0f31-29c2-4c38-b789-f544ec2afff8",
       "name": "Chest, Shoulders, Triceps #2",
       "exerciseIds": [
-        "4c4bcc73-0ee5-4f7f-8ed4-f5588daf0a46",
-        "ceec0b0e-4b41-4753-a194-53a79b4ccbb3",
-        "99e0f672-5f52-4cd7-8aae-0b02b583e93e",
-        "649e5edc-5ebb-4753-9101-6457aa584218",
-        "3e43fff6-4432-48df-9d85-0307180579ed",
-        "d03f6c18-7cd1-48bb-8ae7-768c2c490ea4",
-        "a8440159-afa7-4b7f-a807-3c474be404ed",
-        "edec539b-8b05-4b3f-aac9-fbc306083265"
+        "94e7df7d-0ab0-421f-82c7-d8238ffee7d2",
+        "ea0334ed-e89c-4fbe-a0f9-bd7deec79314",
+        "f3f77d11-dc89-4629-b01a-30d5e38a9ab2",
+        "ebaa3514-bcd1-495f-a08a-0b7c94f6c1ef",
+        "06220870-0565-438c-b7f5-5d6079c1e199",
+        "91c7631c-1141-44ed-a169-03f273e33d95",
+        "7ebce743-1c20-437a-bc25-888fd9eab39c",
+        "08e3bc72-b2a4-43dc-a89e-990016cdafcc"
       ],
       "routineRecords": []
     },
     {
-      "id": "1ce90c98-0828-4c91-ac8e-51e60bd8ec27",
+      "id": "2c5f4c38-da15-4385-9afc-bafb6ca36fa0",
       "name": "Back and Biceps #1",
       "exerciseIds": [
-        "4c4bcc73-0ee5-4f7f-8ed4-f5588daf0a46",
-        "90a33b96-087c-4e13-9057-abb4550527b6",
-        "0dddea6b-1cec-449a-91dd-5010135a0463",
-        "aa528fe3-66a7-4fc9-bec5-147d095ad4c0",
-        "7f8e16f1-8502-47a9-b89f-4653500d1433",
-        "7086d11f-291a-45ab-ba76-c72375afd0ee",
-        "edec539b-8b05-4b3f-aac9-fbc306083265"
+        "94e7df7d-0ab0-421f-82c7-d8238ffee7d2",
+        "fb24157d-bb98-4887-b5de-737d07ccea7c",
+        "a4c71a70-6529-4aa1-adc6-9d17c1b85f27",
+        "69e279ee-477d-4db2-b95b-cfce76634ffb",
+        "1cdffaae-095c-41ed-9eed-97fa7b193630",
+        "aa312385-a6e8-49e4-b56b-66465a9072be",
+        "08e3bc72-b2a4-43dc-a89e-990016cdafcc"
       ],
       "routineRecords": []
     },
     {
-      "id": "063af5d2-d3b3-443f-9593-a09008972bff",
+      "id": "9502dee8-aa3d-495f-a3f4-d149b99486fd",
       "name": "Back and Biceps #2",
       "exerciseIds": [
-        "4c4bcc73-0ee5-4f7f-8ed4-f5588daf0a46",
-        "5e8bdba2-cf7b-49fd-97ee-56761d5dd4bf",
-        "132d1ff0-d0a8-446a-ad7f-a877475c4b01",
-        "78b7c9c6-9d64-4bbd-8d72-80b02c6cd60e",
-        "e4a9203a-2f05-4958-92f6-6c48fc90151b",
-        "cc71ccaf-bc10-4e6d-9250-fe11601a243d",
-        "edec539b-8b05-4b3f-aac9-fbc306083265"
+        "94e7df7d-0ab0-421f-82c7-d8238ffee7d2",
+        "1a87d21e-4354-4190-8cab-752a9e87479b",
+        "f93cbb5b-37d9-44f2-976a-b6c8ea8885fb",
+        "9f661faf-97f6-4e34-8142-8494714f8e3d",
+        "054c65c9-ae3b-4044-a296-dce8edc8e66d",
+        "6fdce757-4d99-41e1-8f74-dc018f392799",
+        "08e3bc72-b2a4-43dc-a89e-990016cdafcc"
       ],
       "routineRecords": []
     },
     {
-      "id": "0eb15bb7-6cf6-43f5-bd94-820d434a5260",
+      "id": "e1869732-7e18-4efc-b903-518dd597ce1e",
       "name": "Legs and Core",
       "exerciseIds": [
-        "4c4bcc73-0ee5-4f7f-8ed4-f5588daf0a46",
-        "496d00ed-e7a0-41f1-9c33-2b2408bb4db3",
-        "aad319b4-49fd-4659-8f87-46f9a5c550a2",
-        "59fb1f0b-14eb-49f8-883b-25763f845c3b",
-        "a35938b0-e988-46c4-ae33-159709bd2287",
-        "ef46fa40-83e7-4f26-bef7-115cfb8abad3",
-        "10d94859-efd1-4866-9ae9-100b3e0f2b9c",
-        "a65f6be0-c16b-44bf-b705-72a76bbc921f",
-        "1ef9d6cf-745b-408d-b66c-ad1026adacdf",
-        "3232dd84-7139-4d3b-b913-58dda3cc4b6b",
-        "edec539b-8b05-4b3f-aac9-fbc306083265"
+        "94e7df7d-0ab0-421f-82c7-d8238ffee7d2",
+        "b713c71b-1225-42c4-b1dc-7ae8e2409004",
+        "3cee1f14-4e96-431a-a46f-6700857fd157",
+        "0a9600b6-0af9-428a-a431-5e124b91cc64",
+        "440e69e4-838a-4267-9a51-c53cff28b3da",
+        "5533395e-2b04-4e12-9d80-7f27cd4c90a1",
+        "4dae44b9-a44a-43b8-b6d2-cffd1cc10ac2",
+        "6920fbe7-7fba-4103-8d54-f8e5587e1e3a",
+        "4eaa1bcb-7891-4b55-863a-2e49f14fee27",
+        "a83133df-0b9e-46b8-bac3-8992df030b4a",
+        "08e3bc72-b2a4-43dc-a89e-990016cdafcc"
       ],
       "routineRecords": []
     }
