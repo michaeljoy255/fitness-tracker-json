@@ -175,7 +175,7 @@ function ExerciseRecord({duration = null, distance = null, sets = []}={}) {
   this.createdAt = new Date().toISOString();
   this.duration = duration;
   this.distance = distance;
-  this.sets = sets; // OneSet []
+  this.sets = sets; // OneSet[]
 }
 
 function OneSet({
