@@ -293,10 +293,6 @@ fitness_data.exercises.push(
           new OneSet({
             weight: 130,
             reps: 7
-          }),
-          new OneSet({
-            weight: 130,
-            reps: 6
           })
         ]
       })
@@ -328,10 +324,6 @@ fitness_data.exercises.push(
           new OneSet({
             weight: 75,
             reps: 10
-          }),
-          new OneSet({
-            weight: 75,
-            reps: 8
           }),
           new OneSet({
             weight: 75,
@@ -379,10 +371,6 @@ fitness_data.exercises.push(
           new OneSet({
             weight: 127.5,
             reps: 9
-          }),
-          new OneSet({
-            weight: 130,
-            reps: 7
           })
         ]
       })
@@ -411,10 +399,6 @@ fitness_data.exercises.push(
         duration: null,
         distance: null,
         sets: [
-          new OneSet({
-            weight: 45,
-            reps: 10
-          }),
           new OneSet({
             weight: 45,
             reps: 10
@@ -777,10 +761,6 @@ fitness_data.exercises.push(
           new OneSet({
             weight: 125,
             reps: 9
-          }),
-          new OneSet({
-            weight: 125,
-            reps: 8
           })
         ]
       })
@@ -809,10 +789,6 @@ fitness_data.exercises.push(
         duration: null,
         distance: null,
         sets: [
-          new OneSet({
-            weight: 115,
-            reps: 10
-          }),
           new OneSet({
             weight: 115,
             reps: 10
@@ -1581,5 +1557,5 @@ fitness_data.routines.push(
   })
 );
 
-// JSON OUTPUT #################################################################
+// OUTPUT ######################################################################
 console.log( JSON.stringify(fitness_data) );
