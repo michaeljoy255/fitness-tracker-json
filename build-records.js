@@ -781,8 +781,8 @@ fitness_data.exercises.push(
     }),
     objectives: [
       new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "2m"}),
-      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
@@ -820,8 +820,8 @@ fitness_data.exercises.push(
     }),
     objectives: [
       new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "2m"}),
-      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
@@ -859,8 +859,8 @@ fitness_data.exercises.push(
     }),
     objectives: [
       new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "2m"}),
-      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
@@ -898,8 +898,8 @@ fitness_data.exercises.push(
     }),
     objectives: [
       new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "2m"}),
-      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
@@ -937,8 +937,8 @@ fitness_data.exercises.push(
     }),
     objectives: [
       new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "2m"}),
-      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
@@ -976,8 +976,8 @@ fitness_data.exercises.push(
     }),
     objectives: [
       new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
@@ -1015,8 +1015,8 @@ fitness_data.exercises.push(
     }),
     objectives: [
       new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
@@ -1054,8 +1054,8 @@ fitness_data.exercises.push(
     }),
     objectives: [
       new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
@@ -1093,8 +1093,8 @@ fitness_data.exercises.push(
     }),
     objectives: [
       new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
@@ -1132,8 +1132,8 @@ fitness_data.exercises.push(
     }),
     objectives: [
       new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
@@ -1171,8 +1171,8 @@ fitness_data.exercises.push(
     }),
     objectives: [
       new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
@@ -1210,8 +1210,8 @@ fitness_data.exercises.push(
     }),
     objectives: [
       new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
@@ -1249,8 +1249,8 @@ fitness_data.exercises.push(
     }),
     objectives: [
       new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
@@ -1288,8 +1288,8 @@ fitness_data.exercises.push(
     }),
     objectives: [
       new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
@@ -1327,8 +1327,8 @@ fitness_data.exercises.push(
     }),
     objectives: [
       new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
@@ -1366,8 +1366,8 @@ fitness_data.exercises.push(
     }),
     objectives: [
       new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "1m"}),
-      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
@@ -1405,8 +1405,8 @@ fitness_data.exercises.push(
     }),
     objectives: [
       new Objective({type: ObjectiveType.REST, icon: Icon.REST, text: "2m"}),
-      new Objective({type: ObjectiveType.TEMPO, icon: Icon.REST, text: TempoType.NORMAL}),
-      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.REST, text: IntensityType.MEDIUM})
+      new Objective({type: ObjectiveType.TEMPO, icon: Icon.TEMPO, text: TempoType.NORMAL}),
+      new Objective({type: ObjectiveType.INTENSITY, icon: Icon.INTENSITY, text: IntensityType.MEDIUM})
     ],
     exerciseRecords: [
       new ExerciseRecord({
