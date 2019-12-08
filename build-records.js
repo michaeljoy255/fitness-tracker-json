@@ -1475,7 +1475,6 @@ fitness_data.routines.push(
   new Routine({
     name: "Chest, Shoulders, Triceps #1",
     exerciseIds: [
-      getExerciseIdByName(ExerciseType.ELLIPTICAL_WARMUP),
       getExerciseIdByName(ExerciseType.SMITH_FLAT_BENCH_PRESS),
       getExerciseIdByName(ExerciseType.SMITH_INCLINE_BENCH_PRESS),
       getExerciseIdByName(ExerciseType.FLY_MACHINE_CHEST),
@@ -1492,7 +1491,6 @@ fitness_data.routines.push(
   new Routine({
     name: "Chest, Shoulders, Triceps #2",
     exerciseIds: [
-      getExerciseIdByName(ExerciseType.ELLIPTICAL_WARMUP),
       getExerciseIdByName(ExerciseType.DUMBBELL_FLAT_BENCH_PRESS),
       getExerciseIdByName(ExerciseType.SMITH_DECLINE_BENCH_PRESS),
       getExerciseIdByName(ExerciseType.LAYING_OVERHEAD_STRAIGHT_ARMS),
@@ -1509,7 +1507,6 @@ fitness_data.routines.push(
   new Routine({
     name: "Back and Biceps #1",
     exerciseIds: [
-      getExerciseIdByName(ExerciseType.ELLIPTICAL_WARMUP),
       getExerciseIdByName(ExerciseType.SMITH_BENT_OVER_ROWS),
       getExerciseIdByName(ExerciseType.SMITH_STIFF_LEG_DEADLIFTS),
       getExerciseIdByName(ExerciseType.SEATED_CABLE_PULLDOWNS),
@@ -1525,7 +1522,6 @@ fitness_data.routines.push(
   new Routine({
     name: "Back and Biceps #2",
     exerciseIds: [
-      getExerciseIdByName(ExerciseType.ELLIPTICAL_WARMUP),
       getExerciseIdByName(ExerciseType.SEATED_CABLE_ROWS),
       getExerciseIdByName(ExerciseType.STANDING_T_ROWS),
       getExerciseIdByName(ExerciseType.ASSISTED_PULL_UPS),
@@ -1541,7 +1537,6 @@ fitness_data.routines.push(
   new Routine({
     name: "Legs and Core",
     exerciseIds: [
-      getExerciseIdByName(ExerciseType.ELLIPTICAL_WARMUP),
       getExerciseIdByName(ExerciseType.LEG_PRESS_MACHINE),
       getExerciseIdByName(ExerciseType.LEG_EXT_MACHINE),
       getExerciseIdByName(ExerciseType.LEG_CURL_MACHINE),
