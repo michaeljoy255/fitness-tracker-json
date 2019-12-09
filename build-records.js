@@ -752,15 +752,15 @@ fitness_data.exercises.push(
         sets: [
           new OneSet({
             weight: 125,
-            reps: 10
-          }),
-          new OneSet({
-            weight: 125,
             reps: 9
           }),
           new OneSet({
             weight: 125,
-            reps: 9
+            reps: 8
+          }),
+          new OneSet({
+            weight: 125,
+            reps: 8
           })
         ]
       })
@@ -833,12 +833,12 @@ fitness_data.exercises.push(
             reps: 10
           }),
           new OneSet({
-            weight: 85,
+            weight: 90,
             reps: 10
           }),
           new OneSet({
-            weight: 85,
-            reps: 10
+            weight: 90,
+            reps: 12
           })
         ]
       })
@@ -990,11 +990,11 @@ fitness_data.exercises.push(
           }),
           new OneSet({
             weight: 25,
-            reps: 10
+            reps: 9
           }),
           new OneSet({
             weight: 25,
-            reps: 10
+            reps: 8
           })
         ]
       })
@@ -1024,15 +1024,15 @@ fitness_data.exercises.push(
         distance: null,
         sets: [
           new OneSet({
-            weight: 30,
+            weight: 32.5,
             reps: 10
           }),
           new OneSet({
-            weight: 30,
+            weight: 32.5,
             reps: 10
           }),
           new OneSet({
-            weight: 30,
+            weight: 32.5,
             reps: 10
           })
         ]
