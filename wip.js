@@ -1,3 +1,6 @@
+"use strict";
+const uuid = require("uuid");
+
 const ENUMS = (function() {
   /**
    * Material icons used throughout the project
@@ -103,25 +106,41 @@ class Exercise {
     name = null,
     category = null,
     desc = null,
-    set_breaks = null,
-    highest_weight = null,
-    most_weight = null,
-    previous_date = null,
-    previous_sets = [],
+    details = null
   }={}) {
     this.id = uuid.v4();
     this.name = name;
     this.category = category;
     this.desc = desc;
-    this.set_breaks = set_breaks;
+    this.details = details;
+  }
+}
+
+class WeightExerciseDetails {
+  constructor({
+    highest_weight = null,
+    most_weight = null,
+    previous_sets = []
+  }={}) {
     this.highest_weight = highest_weight;
     this.most_weight = most_weight;
-    this.previous_date = previous_date;
     this.previous_sets = previous_sets;
   }
 }
 
-class WeightRecord {
+class CardioExerciseDetails {
+  constructor({
+    previous_cardio_date = null,
+    previous_duration = null,
+    previous_dist_steps = null,
+  }={}) {
+    this.previous_cardio_date = previous_cardio_date;
+    this.previous_duration = previous_duration;
+    this.previous_dist_steps = previous_dist_steps;
+  }
+}
+
+class PreviousSet {
   constructor({
     weight = null, // Used for "highest_weight"
     reps = null,
@@ -134,18 +153,6 @@ class WeightRecord {
   }
 }
 
-class PreviousSet {
-  constructor({
-    weight = null,
-    reps = null,
-    total = null
-  }={}) {
-    this.weight = weight;
-    this.reps = reps;
-    this.total = total;
-  }
-}
-
 class Routine {
   constructor({
     name = null,
@@ -154,24 +161,5 @@ class Routine {
     this.id = uuid.v4();
     this.name = name;
     this.exercise_ids = exercise_ids;
-  }
-}
-
-class CardioExercise {
-  constructor({
-    name = null,
-    category = "Cardio",
-    desc = null,
-    previous_date = null,
-    previous_duration = null,
-    previous_distance = null,
-  }={}) {
-    this.id = uuid.v4();
-    this.name = name;
-    this.category = category;
-    this.desc = desc;
-    this.previous_date = previous_date;
-    this.previous_duration = previous_duration;
-    this.previous_distance = previous_distance;
   }
 }
